@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "json-schema-to-typescript": "^13.1.2",
+    "path": "^0.12.7"
+  },
+  "files": [
+    "generated/typescript/",
+    "src/typescript"
+  ]  
+}

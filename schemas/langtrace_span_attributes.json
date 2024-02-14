@@ -1,0 +1,14 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "LangTraceSpanAttributes",
+    "type": "object",
+    "properties": {
+      "service.provider": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "service.provider"
+    ]
+  }
+  

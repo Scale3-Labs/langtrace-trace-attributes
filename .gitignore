@@ -1,0 +1,74 @@
+# Node modules and log files
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python virtual environment
+venv/
+env/
+ENV/
+.env/
+
+# Python compiled files and caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyo
+
+# PyInstaller
+*.manifest
+*.spec
+dist/
+build/
+*.egg-info/
+.Python
+*.pyc
+
+# Jupyter Notebook
+.ipynb_checkpoints/
+
+# macOS system files
+.DS_Store
+
+# Windows system files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Linux system files
+.directory
+
+# Visual Studio Code
+.vscode/
+
+# JetBrains IDEs (IntelliJ, PyCharm, etc.)
+.idea/
+
+# Generated model directories
+/src/python/langtrace/trace-attributes/models/
+
+# TypeScript compiled files
+*.js
+*.js.map
+*.d.ts
+
+# Temporary files
+*.tmp
+*.bak
+*.swp
+*~
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*

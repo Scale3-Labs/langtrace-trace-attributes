@@ -1,0 +1,41 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "OpenAISpanAttributes",
+    "type": "object",
+    "properties": {
+      "url.full": {
+        "type": "string"
+      },
+      "llm.api": {
+        "type": "string"
+      },
+      "llm.model": {
+        "type": "string"
+      },
+      "http.max.retries": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "http.timeout": {
+        "type": "integer",
+        "format": "int64"
+      },
+      "llm.prompts": {
+        "type": "string"
+      },
+      "llm.responses": {
+        "type": "string"
+      },
+      "llm.token.counts": {
+        "type": "string"
+      }
+    },
+    "required": [
+      "url.full",
+      "llm.api",
+      "llm.model",
+      "llm.prompts",
+      "llm.responses"
+    ]
+  }
+  
