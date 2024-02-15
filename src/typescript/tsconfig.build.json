@@ -1,16 +1,18 @@
 {
     "compilerOptions": {
         "outDir": "./dist",
+        "rootDir": "./",
         "module": "commonjs",
-        "target": "es6",
+        "target": "es5",
         "declaration": true,
-        "sourceMap": true
+        "sourceMap": true,
+        "moduleResolution": "node",
     },
     "include": [
-        "langtrace/**/*"
+        "**/*"
     ],
     "exclude": [
         "node_modules",
-        "**/*.spec.ts"
+        "dist"
     ]
 }

@@ -20,7 +20,7 @@ const schemaBaseName = path.basename(
 
 // Define the output TypeScript file path
 const outputFilePath = path.join(
-  "src/typescript/langtrace/trace-attributes/models",
+  "src/typescript/models",
   `${schemaBaseName}.d.ts`
 );
 
