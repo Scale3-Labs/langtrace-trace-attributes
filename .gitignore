@@ -54,6 +54,7 @@ Desktop.ini
 
 # Generated model directories
 /src/python/langtrace/trace-attributes/models/
+/src/typescript/langtrace/trace-attributes/models/
 
 # TypeScript compiled files
 *.js

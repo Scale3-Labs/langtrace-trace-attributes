@@ -40,9 +40,10 @@ To generate Python models from a JSON schema, use the `generate_python.sh` scrip
 ### TypeScript Interfaces
 
 To generate TypeScript interfaces from a JSON schema, use the `schema_to_interface.ts` script located in the `src/models` directory. This script also takes the path to a JSON schema file as an argument and generates a TypeScript interface in the `generated/typescript` directory.
-
+t
 ```sh
-ts-node src/models/schema_to_interface.ts schemas/openai_span_attributes.json
+ts-node scripts/generate_typescript.ts schemas/langtrace_span_attributes.json
+ts-node scripts/generate_typescript.ts schemas/openai_span_attributes.json
 ```
 
 To include instructions for building and uploading your Python package to PyPI, as well as how to automate this process using GitHub Actions, you can update your `README.md` file with the following sections:
@@ -91,6 +92,68 @@ You'll be prompted for your PyPI username and password. For token-based authenti
 2. Navigate to **Account Settings** > **API tokens** > **Add API token**.
 3. Follow the prompts to generate a new token.
 4. Use this token with `twine` for uploading your package.
+
+To update your `README.md` with instructions for building and publishing your TypeScript library to npm, you can include the following sections:
+
+---
+
+## Building and Publishing to npm
+
+This guide outlines the steps to build your TypeScript library and publish it to the npm registry, making it available for installation and use in other projects.
+
+### Prerequisites
+
+Before you begin, ensure you have:
+
+- Node.js and npm installed. [Download here](https://nodejs.org/en/download/).
+- An npm account. [Sign up here](https://www.npmjs.com/signup) if you don't have one.
+- Logged into npm in your command line. Run `npm login` and follow the prompts.
+
+### Building Your TypeScript Library
+
+1. **Navigate to Your Project Directory** where your `package.json` is located, typically `src/typescript`.
+
+    ```sh
+    cd src/typescript
+    ```
+
+2. **Install Dependencies** if you haven't already:
+
+    ```sh
+    npm install
+    ```
+
+3. **Build Your Project** to compile TypeScript files into JavaScript:
+
+    ```sh
+    npm run build
+    ```
+
+    This step assumes you have a `"build"` script in your `package.json` that runs the TypeScript compiler, typically `"build": "tsc"`.
+
+### Publishing Your Package to npm
+
+1. **Update the `package.json`** to ensure it has the correct `"name"` (scoped if necessary, e.g., `@langtrace/trace-attributes`), `"version"`, and other relevant information.
+
+2. **Build Your Library** as described in the previous section to ensure you have the latest compiled version.
+
+3. **Publish Your Package**:
+
+    ```sh
+    npm publish --access public
+    ```
+
+    The `--access public` flag is necessary if you're publishing a scoped package and want it to be publicly available.
+
+4. **Verify** that your package is now available on npm by visiting `https://www.npmjs.com/package/@langtrace/trace-attributes` (adjust the URL to match your package name).
+
+## Updating Your Package
+
+If you make changes and wish to publish an updated version of your package:
+
+1. Make your changes and commit them to your repository.
+2. Update the `"version"` in your `package.json` following [Semantic Versioning](https://semver.org/).
+3. Repeat the build and publish steps.
 
 ## Contributing
 

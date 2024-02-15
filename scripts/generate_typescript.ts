@@ -13,7 +13,6 @@ if (process.argv.length < 3) {
 
 // Take the schema file path from the command line arguments
 const schemaFilePath = process.argv[2];
-const schemaDir = path.dirname(schemaFilePath);
 const schemaBaseName = path.basename(
   schemaFilePath,
   path.extname(schemaFilePath)
@@ -21,7 +20,7 @@ const schemaBaseName = path.basename(
 
 // Define the output TypeScript file path
 const outputFilePath = path.join(
-  "generated/typescript",
+  "src/typescript/langtrace/trace-attributes/models",
   `${schemaBaseName}.d.ts`
 );
 
