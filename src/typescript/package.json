@@ -1,0 +1,21 @@
+{
+    "name": "@langtrase/trace-attributes",
+    "version": "1.0.0",
+    "description": "LangTrace - Trace Attributes",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "scripts": {
+      "build": "tsc -p tsconfig.build.json",
+      "prepublishOnly": "npm run build"
+    },
+    "files": [
+      "dist/**/*"
+    ],
+    "author": "Karthik Kalyanaraman",
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+      "typescript": "^4.0.0"
+    }
+  }
+  
