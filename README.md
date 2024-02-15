@@ -133,7 +133,7 @@ Before you begin, ensure you have:
 
 ### Publishing Your Package to npm
 
-1. **Update the `package.json`** to ensure it has the correct `"name"` (scoped if necessary, e.g., `@langtrace/trace-attributes`), `"version"`, and other relevant information.
+1. **Update the `package.json`** to ensure it has the correct `"name"` (scoped if necessary, e.g., `@langtrase/trace-attributes`), `"version"`, and other relevant information.
 
 2. **Build Your Library** as described in the previous section to ensure you have the latest compiled version.
 
@@ -145,7 +145,7 @@ Before you begin, ensure you have:
 
     The `--access public` flag is necessary if you're publishing a scoped package and want it to be publicly available.
 
-4. **Verify** that your package is now available on npm by visiting `https://www.npmjs.com/package/@langtrace/trace-attributes` (adjust the URL to match your package name).
+4. **Verify** that your package is now available on npm by visiting `https://www.npmjs.com/package/@langtrase/trace-attributes` (adjust the URL to match your package name).
 
 ## Updating Your Package
 
