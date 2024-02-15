@@ -6,7 +6,7 @@ import * as path from "path";
 // Check for the presence of the command line argument
 if (process.argv.length < 3) {
   console.log(
-    "Usage: ts-node scripts/schema_to_interface.ts src/<vendor>_span_attributes.json"
+    "Usage: ts-node scripts/schema_to_interface.ts schemas/<vendor>_span_attributes.json"
   );
   process.exit(1);
 }

@@ -12,7 +12,7 @@ SCHEMA_FILENAME=$(basename -- "$SCHEMA_FILE")
 SCHEMA_NAME="${SCHEMA_FILENAME%.*}"
 
 # Define the output file path, using the schema name for the Python model file
-OUTPUT_FILE="src/python/langtrace/trace-attributes/models/${SCHEMA_NAME}.py"
+OUTPUT_FILE="src/python/langtrace/trace_attributes/models/${SCHEMA_NAME}.py"
 
 # Generate the Python model
 datamodel-codegen --input "$SCHEMA_FILE" --input-file-type jsonschema --output "$OUTPUT_FILE"
