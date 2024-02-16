@@ -1,0 +1,26 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "PineconeSpanAttributes",
+    "type": "object",
+    "properties": {
+      "db.index": {
+        "type": "string"
+      },
+      "db.namespace": {
+        "type": "string"
+      },
+      "server.address": {
+        "type": "string"
+      },
+      "db.top_k": {
+        "type": "number",
+        "format": "float"
+      },
+      "db.operation": {
+        "type": "string",
+        "format": "float"
+      }
+    },
+    "required": []
+  }
+  
