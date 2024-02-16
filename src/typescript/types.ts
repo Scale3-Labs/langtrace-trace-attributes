@@ -10,4 +10,5 @@ export enum LlamaIndexMethods {
   TASK_LLAMAINDEX_CHATENGINE_EXTRACT = "task.llamaindex.ChatEngine.chat",
   TASK_LLAMAINDEX_RETRIEVER_RETRIEVE = "task.llamaindex.Retriever.retrieve",
   TASK_LLAMAINDEX_QUERYENGINE_QUERY = "task.llamaindex.QueryEngine.query",
+  TASK_LLAMAINDEX_BASEREADER_LOADDATA = "task.llamaindex.BaseReader.loadData",
 }
