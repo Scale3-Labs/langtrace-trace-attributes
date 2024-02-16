@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "PineconeSpanAttributes",
+    "title": "DatabaseSpanAttributes",
     "type": "object",
     "properties": {
       "db.index": {
@@ -17,10 +17,20 @@
         "format": "float"
       },
       "db.operation": {
-        "type": "string",
-        "format": "float"
+        "type": "string"
+      },
+      "db.system": {
+        "type": "string"
+      },
+      "db.chromadb.collection": {
+        "type": "string"
+      },
+      "db.chromadb.embedding_model": {
+        "type": "string"
       }
     },
-    "required": []
+    "required": [
+      "db.system"
+    ]
   }
   

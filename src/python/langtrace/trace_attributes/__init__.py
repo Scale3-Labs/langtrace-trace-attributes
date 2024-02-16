@@ -1,6 +1,7 @@
 # __init__.py
 from enum import Enum
 
+from .models.database_span_attributes import DatabaseSpanAttributes
 from .models.langtrace_span_attributes import LangTraceSpanAttributes
 from .models.openai_span_attributes import OpenAISpanAttributes
 
@@ -18,4 +19,4 @@ class LlamaIndexMethods(Enum):
     TASK_LLAMAINDEX_BASEREADER_LOADDATA = "task.llamaindex.BaseReader.loadData"
 
 # Export only what you want to be accessible directly through `import my_package`
-__all__ = ['OpenAISpanAttributes', 'LangTraceSpanAttributes', 'Event', 'LlamaIndexMethods']
+__all__ = ['OpenAISpanAttributes', 'LangTraceSpanAttributes', 'DatabaseSpanAttributes', 'Event', 'LlamaIndexMethods']
