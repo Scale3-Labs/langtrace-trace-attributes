@@ -11,12 +11,31 @@ class Event(Enum):
     STREAM_OUTPUT = "stream.output"
     STREAM_END = "stream.end"
 class LlamaIndexMethods(Enum):
-    TASK_LLAMAINDEX_BASEEXTRACTOR_EXTRACT = "task.llamaindex.BaseExtractor.extract"
-    TASK_LLAMAINDEX_SIMPLEPROMPT_CALL = "task.llamaindex.SimplePrompt.call"
-    TASK_LLAMAINDEX_CHATENGINE_EXTRACT = "task.llamaindex.ChatEngine.chat"
-    TASK_LLAMAINDEX_RETRIEVER_RETRIEVE = "task.llamaindex.Retriever.retrieve"
-    TASK_LLAMAINDEX_QUERYENGINE_QUERY = "task.llamaindex.QueryEngine.query"
-    TASK_LLAMAINDEX_BASEREADER_LOADDATA = "task.llamaindex.BaseReader.loadData"
+    BASEEXTRACTOR_EXTRACT = "llamaindex.BaseExtractor.extract"
+    SIMPLEPROMPT_CALL = "llamaindex.SimplePrompt.call"
+    CHATENGINE_EXTRACT = "llamaindex.ChatEngine.chat"
+    RETRIEVER_RETRIEVE = "llamaindex.Retriever.retrieve"
+    QUERYENGINE_QUERY = "llamaindex.QueryEngine.query"
+    BASEREADER_LOADDATA = "llamaindex.BaseReader.loadData"
+class OpenAIMethods(Enum):
+    CHAT_COMPLETION = "openai.chat.completion.create"
+    IMAGES_GENERATION = "openai.images.generation.create"
+    EMBEDDINGS_CREATE = "openai.embeddings.create"
+class ChromaDBMethods(Enum):
+    ADD = "chromadb.collection.add"
+    QUERY = "chromadb.collection.query"
+    DELETE = "chromadb.collection.delete"
+    PEEK = "chromadb.collection.peek"
+    UPDATE = "chromadb.collection.update"
+    MODIFY = "chromadb.collection.modify"
+    COUNT = "chromadb.collection.count"
+class PineconeMethods(Enum):
+    UPSERT = "pinecone.index.upsert"
+    QUERY = "pinecone.index.query"
+    DELETE_ONE = "pinecone.index.deleteOne"
+    DELETE_MANY = "pinecone.index.deleteMany"
+    DELETE_ALL = "pinecone.index.deleteAll"
+
 
 # Export only what you want to be accessible directly through `import my_package`
-__all__ = ['OpenAISpanAttributes', 'LangTraceSpanAttributes', 'DatabaseSpanAttributes', 'Event', 'LlamaIndexMethods']
+__all__ = ['OpenAISpanAttributes', 'LangTraceSpanAttributes', 'DatabaseSpanAttributes', 'Event', 'LlamaIndexMethods', 'OpenAIMethods', 'ChromaDBMethods', 'PineconeMethods']
