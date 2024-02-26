@@ -9,6 +9,8 @@ class Event(Enum):
     STREAM_START = "stream.start"
     STREAM_OUTPUT = "stream.output"
     STREAM_END = "stream.end"
+
+
 class LlamaIndexMethods(Enum):
     BASEEXTRACTOR_EXTRACT = "llamaindex.BaseExtractor.extract"
     SIMPLEPROMPT_CALL = "llamaindex.SimplePrompt.call"
@@ -16,10 +18,14 @@ class LlamaIndexMethods(Enum):
     RETRIEVER_RETRIEVE = "llamaindex.Retriever.retrieve"
     QUERYENGINE_QUERY = "llamaindex.QueryEngine.query"
     BASEREADER_LOADDATA = "llamaindex.BaseReader.loadData"
+
+
 class OpenAIMethods(Enum):
     CHAT_COMPLETION = "openai.chat.completion.create"
     IMAGES_GENERATION = "openai.images.generation.create"
     EMBEDDINGS_CREATE = "openai.embeddings.create"
+
+
 class ChromaDBMethods(Enum):
     ADD = "chromadb.collection.add"
     QUERY = "chromadb.collection.query"
@@ -28,6 +34,8 @@ class ChromaDBMethods(Enum):
     UPDATE = "chromadb.collection.update"
     MODIFY = "chromadb.collection.modify"
     COUNT = "chromadb.collection.count"
+
+
 class PineconeMethods(Enum):
     UPSERT = "pinecone.index.upsert"
     QUERY = "pinecone.index.query"
@@ -37,4 +45,5 @@ class PineconeMethods(Enum):
 
 
 # Export only what you want to be accessible directly through `import my_package`
-__all__ = ['OpenAISpanAttributes', 'DatabaseSpanAttributes', 'Event', 'LlamaIndexMethods', 'OpenAIMethods', 'ChromaDBMethods', 'PineconeMethods']
+__all__ = ['OpenAISpanAttributes', 'DatabaseSpanAttributes', 'Event',
+           'LlamaIndexMethods', 'OpenAIMethods', 'ChromaDBMethods', 'PineconeMethods']
