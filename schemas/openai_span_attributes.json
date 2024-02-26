@@ -3,6 +3,9 @@
     "title": "OpenAISpanAttributes",
     "type": "object",
     "properties": {
+      "service.provider": {
+        "type": "string"
+      },
       "url.full": {
         "type": "string"
       },
@@ -54,11 +57,11 @@
       }
     },
     "required": [
+      "service.provider",
       "url.full",
       "llm.api",
       "llm.model",
-      "llm.prompts",
-      "llm.responses"
+      "llm.prompts"
     ]
   }
   

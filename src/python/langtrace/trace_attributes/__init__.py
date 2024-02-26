@@ -2,7 +2,6 @@
 from enum import Enum
 
 from .models.database_span_attributes import DatabaseSpanAttributes
-from .models.langtrace_span_attributes import LangTraceSpanAttributes
 from .models.openai_span_attributes import OpenAISpanAttributes
 
 
@@ -38,4 +37,4 @@ class PineconeMethods(Enum):
 
 
 # Export only what you want to be accessible directly through `import my_package`
-__all__ = ['OpenAISpanAttributes', 'LangTraceSpanAttributes', 'DatabaseSpanAttributes', 'Event', 'LlamaIndexMethods', 'OpenAIMethods', 'ChromaDBMethods', 'PineconeMethods']
+__all__ = ['OpenAISpanAttributes', 'DatabaseSpanAttributes', 'Event', 'LlamaIndexMethods', 'OpenAIMethods', 'ChromaDBMethods', 'PineconeMethods']

@@ -3,6 +3,9 @@
     "title": "DatabaseSpanAttributes",
     "type": "object",
     "properties": {
+      "service.provider": {
+        "type": "string"
+      },
       "db.index": {
         "type": "string"
       },
@@ -30,6 +33,7 @@
       }
     },
     "required": [
+      "service.provider",
       "db.system"
     ]
   }
