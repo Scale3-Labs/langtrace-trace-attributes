@@ -2,7 +2,8 @@
 from enum import Enum
 
 from .models.database_span_attributes import DatabaseSpanAttributes
-from .models.openai_span_attributes import OpenAISpanAttributes
+from .models.framework_span_attributes import FrameworkSpanAttributes
+from .models.llm_span_attributes import LLMSpanAttributes
 
 
 class Event(Enum):
@@ -13,6 +14,7 @@ class Event(Enum):
 
 class LlamaIndexMethods(Enum):
     BASEEXTRACTOR_EXTRACT = "llamaindex.BaseExtractor.extract"
+    BASEEXTRACTOR_AEXTRACT = "llamaindex.BaseExtractor.aextract"
     SIMPLEPROMPT_CALL = "llamaindex.SimplePrompt.call"
     CHATENGINE_EXTRACT = "llamaindex.ChatEngine.chat"
     RETRIEVER_RETRIEVE = "llamaindex.Retriever.retrieve"
@@ -45,5 +47,5 @@ class PineconeMethods(Enum):
 
 
 # Export only what you want to be accessible directly through `import my_package`
-__all__ = ['OpenAISpanAttributes', 'DatabaseSpanAttributes', 'Event',
+__all__ = ['LLMSpanAttributes', 'DatabaseSpanAttributes', 'FrameworkSpanAttributes', 'Event',
            'LlamaIndexMethods', 'OpenAIMethods', 'ChromaDBMethods', 'PineconeMethods']

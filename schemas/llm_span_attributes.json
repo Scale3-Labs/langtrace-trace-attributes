@@ -1,9 +1,18 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "OpenAISpanAttributes",
+    "title": "LLMSpanAttributes",
     "type": "object",
     "properties": {
-      "service.provider": {
+      "langtrace.service.name": {
+        "type": "string"
+      },
+      "langtrace.service.type": {
+        "type": "string"
+      },
+      "langtrace.service.version": {
+        "type": "string"
+      },
+      "langtrace.version": {
         "type": "string"
       },
       "url.full": {
@@ -29,14 +38,6 @@
       "llm.system.fingerprint": {
         "type": "string"
       },
-      "http.max.retries": {
-        "type": "integer",
-        "format": "int32"
-      },
-      "http.timeout": {
-        "type": "integer",
-        "format": "int64"
-      },
       "llm.prompts": {
         "type": "string"
       },
@@ -54,10 +55,21 @@
       },
       "llm.dimensions" : {
         "type": "string"
+      },
+      "http.max.retries": {
+        "type": "integer",
+        "format": "int32"
+      },
+      "http.timeout": {
+        "type": "integer",
+        "format": "int64"
       }
     },
     "required": [
-      "service.provider",
+      "langtrace.service.name",
+      "langtrace.service.type",
+      "langtrace.service.version",
+      "langtrace.version",
       "url.full",
       "llm.api",
       "llm.model",

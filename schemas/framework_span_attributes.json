@@ -1,6 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "DatabaseSpanAttributes",
+    "title": "FrameworkSpanAttributes",
     "type": "object",
     "properties": {
       "langtrace.service.name": {
@@ -15,29 +15,22 @@
       "langtrace.version": {
         "type": "string"
       },
-      "server.address": {
+      "langchain.task.name": {
         "type": "string"
       },
-      "db.operation": {
+      "langchain.inputs": {
         "type": "string"
       },
-      "db.system": {
+      "langchain.outputs": {
         "type": "string"
       },
-      "db.namespace": {
+      "llamaindex.task.name": {
         "type": "string"
       },
-      "db.index": {
+      "llamaindex.inputs": {
         "type": "string"
       },
-      "db.collection.name": {
-        "type": "string"
-      },
-      "db.pinecone.top_k": {
-        "type": "number",
-        "format": "float"
-      },
-      "db.chromadb.embedding_model": {
+      "llamaindex.outputs": {
         "type": "string"
       }
     },
@@ -45,8 +38,7 @@
       "langtrace.service.name",
       "langtrace.service.type",
       "langtrace.service.version",
-      "langtrace.version",
-      "db.system"
+      "langtrace.version"
     ]
   }
   
