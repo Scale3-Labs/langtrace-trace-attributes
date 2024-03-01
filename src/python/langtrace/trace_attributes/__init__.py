@@ -16,10 +16,11 @@ class LlamaIndexMethods(Enum):
     BASEEXTRACTOR_EXTRACT = "llamaindex.BaseExtractor.extract"
     BASEEXTRACTOR_AEXTRACT = "llamaindex.BaseExtractor.aextract"
     SIMPLEPROMPT_CALL = "llamaindex.SimplePrompt.call"
-    CHATENGINE_EXTRACT = "llamaindex.ChatEngine.chat"
+    CHATENGINE_CHAT = "llamaindex.ChatEngine.chat"
+    CHATENGINE_ACHAT = "llamaindex.ChatEngine.achat"
     RETRIEVER_RETRIEVE = "llamaindex.Retriever.retrieve"
     QUERYENGINE_QUERY = "llamaindex.QueryEngine.query"
-    BASEREADER_LOADDATA = "llamaindex.BaseReader.loadData"
+    BASEREADER_LOADDATA = "llamaindex.BaseReader.load_data"
 
 
 class OpenAIMethods(Enum):
