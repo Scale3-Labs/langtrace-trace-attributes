@@ -23,8 +23,8 @@ class LlamaIndexMethods(Enum):
 
 
 class OpenAIMethods(Enum):
-    CHAT_COMPLETION = "openai.chat.completion.create"
-    IMAGES_GENERATION = "openai.images.generation.create"
+    CHAT_COMPLETION = "openai.chat.completions.create"
+    IMAGES_GENERATION = "openai.images.generate"
     EMBEDDINGS_CREATE = "openai.embeddings.create"
 
 
@@ -41,9 +41,7 @@ class ChromaDBMethods(Enum):
 class PineconeMethods(Enum):
     UPSERT = "pinecone.index.upsert"
     QUERY = "pinecone.index.query"
-    DELETE_ONE = "pinecone.index.deleteOne"
-    DELETE_MANY = "pinecone.index.deleteMany"
-    DELETE_ALL = "pinecone.index.deleteAll"
+    DELETE = "pinecone.index.delete"
 
 
 # Export only what you want to be accessible directly through `import my_package`

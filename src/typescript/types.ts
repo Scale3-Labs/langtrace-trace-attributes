@@ -14,8 +14,8 @@ export enum LlamaIndexMethods {
 }
 
 export enum OpenAIMethods {
-  CHAT_COMPLETION = "openai.chat.completion.create",
-  IMAGES_GENERATION = "openai.images.generation.create",
+  CHAT_COMPLETION = "openai.chat.completions.create",
+  IMAGES_GENERATION = "openai.images.generate",
   EMBEDDINGS_CREATE = "openai.embeddings.create",
 }
 
