@@ -31,10 +31,12 @@ class OpenAIMethods(Enum):
 
 class ChromaDBMethods(Enum):
     ADD = "chromadb.collection.add"
+    GET = "chromadb.collection.get"
     QUERY = "chromadb.collection.query"
     DELETE = "chromadb.collection.delete"
     PEEK = "chromadb.collection.peek"
     UPDATE = "chromadb.collection.update"
+    UPSERT = "chromadb.collection.upsert"
     MODIFY = "chromadb.collection.modify"
     COUNT = "chromadb.collection.count"
 
