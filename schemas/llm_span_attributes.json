@@ -41,6 +41,9 @@
       "llm.prompts": {
         "type": "string"
       },
+      "llm.function.prompts": {
+        "type": "string"
+      },
       "llm.responses": {
         "type": "string"
       },
