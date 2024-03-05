@@ -1,6 +1,6 @@
 {
     "name": "@langtrase/trace-attributes",
-    "version": "1.0.33",
+    "version": "1.0.34",
     "description": "LangTrace - Trace Attributes",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",

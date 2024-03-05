@@ -4,7 +4,6 @@ export { LLMSpanAttributes } from "./models/llm_span_attributes";
 export {
   ChromaDBMethods,
   Event,
-  LlamaIndexMethods,
   OpenAIMethods,
   PineconeMethods,
 } from "./types";
