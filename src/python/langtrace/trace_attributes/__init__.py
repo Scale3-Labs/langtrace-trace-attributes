@@ -12,17 +12,6 @@ class Event(Enum):
     STREAM_END = "stream.end"
 
 
-class LlamaIndexMethods(Enum):
-    BASEEXTRACTOR_EXTRACT = "llamaindex.BaseExtractor.extract"
-    BASEEXTRACTOR_AEXTRACT = "llamaindex.BaseExtractor.aextract"
-    SIMPLEPROMPT_CALL = "llamaindex.SimplePrompt.call"
-    CHATENGINE_CHAT = "llamaindex.ChatEngine.chat"
-    CHATENGINE_ACHAT = "llamaindex.ChatEngine.achat"
-    RETRIEVER_RETRIEVE = "llamaindex.Retriever.retrieve"
-    QUERYENGINE_QUERY = "llamaindex.QueryEngine.query"
-    BASEREADER_LOADDATA = "llamaindex.BaseReader.load_data"
-
-
 class OpenAIMethods(Enum):
     CHAT_COMPLETION = "openai.chat.completions.create"
     IMAGES_GENERATION = "openai.images.generate"
@@ -49,4 +38,4 @@ class PineconeMethods(Enum):
 
 # Export only what you want to be accessible directly through `import my_package`
 __all__ = ['LLMSpanAttributes', 'DatabaseSpanAttributes', 'FrameworkSpanAttributes', 'Event',
-           'LlamaIndexMethods', 'OpenAIMethods', 'ChromaDBMethods', 'PineconeMethods']
+           'OpenAIMethods', 'ChromaDBMethods', 'PineconeMethods']
