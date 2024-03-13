@@ -25,7 +25,6 @@ export type FrameworkSpanAttributes = Attributes & ( FrameworkSpanAttributesInte
 export {
   ChromaDBMethods,
   Event,
-  LlamaIndexMethods,
   OpenAIMethods,
   PineconeMethods,
 } from "./types";

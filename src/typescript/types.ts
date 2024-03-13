@@ -4,15 +4,6 @@ export enum Event {
   STREAM_END = "stream.end",
 }
 
-export enum LlamaIndexMethods {
-  BASEEXTRACTOR_EXTRACT = "llamaindex.BaseExtractor.extract",
-  SIMPLEPROMPT_CALL = "llamaindex.SimplePrompt.call",
-  CHATENGINE_EXTRACT = "llamaindex.ChatEngine.chat",
-  RETRIEVER_RETRIEVE = "llamaindex.Retriever.retrieve",
-  QUERYENGINE_QUERY = "llamaindex.QueryEngine.query",
-  BASEREADER_LOADDATA = "llamaindex.BaseReader.loadData",
-}
-
 export enum OpenAIMethods {
   CHAT_COMPLETION = "openai.chat.completions.create",
   IMAGES_GENERATION = "openai.images.generate",
