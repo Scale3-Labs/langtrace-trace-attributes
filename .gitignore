@@ -52,10 +52,6 @@ Desktop.ini
 # JetBrains IDEs (IntelliJ, PyCharm, etc.)
 .idea/
 
-# Generated model directories
-/src/python/langtrace/trace-attributes/models/
-/src/typescript/models/
-
 # TypeScript compiled files
 *.js
 *.js.map
