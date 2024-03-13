@@ -1,44 +1,44 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "FrameworkSpanAttributes",
-    "type": "object",
-    "properties": {
-      "langtrace.service.name": {
-        "type": "string"
-      },
-      "langtrace.service.type": {
-        "type": "string"
-      },
-      "langtrace.service.version": {
-        "type": "string"
-      },
-      "langtrace.version": {
-        "type": "string"
-      },
-      "langchain.task.name": {
-        "type": "string"
-      },
-      "langchain.inputs": {
-        "type": "string"
-      },
-      "langchain.outputs": {
-        "type": "string"
-      },
-      "llamaindex.task.name": {
-        "type": "string"
-      },
-      "llamaindex.inputs": {
-        "type": "string"
-      },
-      "llamaindex.outputs": {
-        "type": "string"
-      }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FrameworkSpanAttributes",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "langtrace.service.name": {
+      "type": "string"
     },
-    "required": [
-      "langtrace.service.name",
-      "langtrace.service.type",
-      "langtrace.service.version",
-      "langtrace.version"
-    ]
-  }
-  
+    "langtrace.service.type": {
+      "type": "string"
+    },
+    "langtrace.service.version": {
+      "type": "string"
+    },
+    "langtrace.version": {
+      "type": "string"
+    },
+    "langchain.task.name": {
+      "type": "string"
+    },
+    "langchain.inputs": {
+      "type": "string"
+    },
+    "langchain.outputs": {
+      "type": "string"
+    },
+    "llamaindex.task.name": {
+      "type": "string"
+    },
+    "llamaindex.inputs": {
+      "type": "string"
+    },
+    "llamaindex.outputs": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "langtrace.service.name",
+    "langtrace.service.type",
+    "langtrace.service.version",
+    "langtrace.version"
+  ]
+}
