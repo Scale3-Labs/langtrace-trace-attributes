@@ -22,6 +22,7 @@ This repository hosts the JSON schema definitions and the generated model code f
 ## Prerequisites
 
 Before you begin, make sure you have the following installed on your system:
+
 - Node.js and npm
 - Python and pip
 - `ts-node` for running TypeScript scripts directly (install globally via `npm install -g ts-node`)
@@ -41,6 +42,7 @@ To generate Python models from a JSON schema, use the `generate_python.sh` scrip
 
 To generate TypeScript interfaces from a JSON schema, use the `schema_to_interface.ts` script located in the `src/models` directory. This script also takes the path to a JSON schema file as an argument and generates a TypeScript interface in the `generated/typescript` directory.
 t
+
 ```sh
 ts-node scripts/generate_typescript.ts schemas/langtrace_span_attributes.json
 ts-node scripts/generate_typescript.ts schemas/openai_span_attributes.json
@@ -133,8 +135,8 @@ Before you begin, ensure you have:
 
 ### Publishing Your Package to npm
 
-1. **Update the `package.json`** to ensure it has the correct `"name"` (scoped if necessary, e.g., `@langtrase/trace-attributes`), `"version"`, and other relevant information.
-
+1. **Update the `package.json/package-lock.json`** to ensure it has the correct `"name"` (scoped if necessary, e.g., `@langtrase/trace-attributes`), `"version"`, and other relevant information.
+    - Use `npm version <major, minor, patch>` to properly update the version
 2. **Build Your Library** as described in the previous section to ensure you have the latest compiled version.
 
 3. **Publish Your Package**:
@@ -152,7 +154,8 @@ Before you begin, ensure you have:
 If you make changes and wish to publish an updated version of your package:
 
 1. Make your changes and commit them to your repository.
-2. Update the `"version"` in your `package.json` following [Semantic Versioning](https://semver.org/).
+2. **Update the `package.json/package-lock.json`** to ensure it has the correct `"name"` (scoped if necessary, e.g., `@langtrase/trace-attributes`), `"version"`, and other relevant information.
+    - Use `npm version <major, minor, patch>` to properly update the version
 3. Repeat the build and publish steps.
 
 ## Contributing

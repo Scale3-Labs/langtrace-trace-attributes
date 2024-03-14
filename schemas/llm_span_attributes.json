@@ -2,6 +2,7 @@
     "$schema": "http://json-schema.org/draft-07/schema#",
     "title": "LLMSpanAttributes",
     "type": "object",
+    "additionalProperties": false,
     "properties": {
       "langtrace.service.name": {
         "type": "string"
@@ -32,6 +33,10 @@
         "type": "number",
         "format": "float"
       },
+      "llm.top_k": {
+        "type": "number",
+        "format": "float"
+      },
       "llm.user": {
         "type": "string"
       },
@@ -59,6 +64,13 @@
       "llm.dimensions" : {
         "type": "string"
       },
+      "user.id": {
+        "type": "string"
+      },
+      "user.feedback.rating": {
+        "type": "integer",
+        "enum": [1, -1]
+      },
       "http.max.retries": {
         "type": "integer",
         "format": "int32"
@@ -79,4 +91,3 @@
       "llm.prompts"
     ]
   }
-  

@@ -29,7 +29,13 @@ const schema = JSON.parse(fs.readFileSync(schemaFilePath, "utf8"));
 
 // Compile the JSON Schema to a TypeScript interface
 TJS.compile(schema, schemaBaseName)
-  .then((ts) => fs.writeFileSync(outputFilePath, ts))
+  .then((ts) => {
+    const dirname = path.dirname(outputFilePath)
+    if (!fs.existsSync(dirname)) {
+      fs.mkdirSync(dirname, { recursive: true })
+    }
+    fs.writeFileSync(outputFilePath, ts);
+  })
   .catch((error) => console.error(error));
 
 console.log(`TypeScript definition generated at: ${outputFilePath}`);
