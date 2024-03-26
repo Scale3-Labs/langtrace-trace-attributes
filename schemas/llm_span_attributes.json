@@ -87,7 +87,6 @@
       "langtrace.version",
       "url.full",
       "llm.api",
-      "llm.model",
       "llm.prompts"
     ]
   }

@@ -12,7 +12,7 @@ export interface LLMSpanAttributes {
   "langtrace.version": string;
   "url.full": string;
   "llm.api": string;
-  "llm.model": string;
+  "llm.model"?: string;
   "llm.temperature"?: number;
   "llm.top_p"?: number;
   "llm.top_k"?: number;
