@@ -7,7 +7,7 @@ from __future__ import annotations
 from enum import Enum
 from typing import Optional
 
-from pydantic import BaseModel, Extra, Field
+from pydantic import BaseModel, Extra, Field, validator
 
 
 class UserFeedbackRating(Enum):
@@ -39,8 +39,14 @@ class LLMSpanAttributes(BaseModel):
     llm_encoding_format: Optional[str] = Field(None, alias='llm.encoding.format')
     llm_dimensions: Optional[str] = Field(None, alias='llm.dimensions')
     user_id: Optional[str] = Field(None, alias='user.id')
-    user_feedback_rating: Optional[UserFeedbackRating] = Field(
+    user_feedback_rating: Optional[int] = Field(
         None, alias='user.feedback.rating'
     )
     http_max_retries: Optional[int] = Field(None, alias='http.max.retries')
     http_timeout: Optional[int] = Field(None, alias='http.timeout')
+
+    @validator('user_feedback_rating')
+    def check_rating_values(cls, value):
+        if value not in {1, -1}:
+            raise ValueError('Rating must be 1 or -1')
+        return value
