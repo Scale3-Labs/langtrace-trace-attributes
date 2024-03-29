@@ -69,7 +69,7 @@
       },
       "user.feedback.rating": {
         "type": "integer",
-        "enum": [1, -1]
+        "format": "int32"
       },
       "http.max.retries": {
         "type": "integer",

@@ -26,7 +26,7 @@ export interface LLMSpanAttributes {
   "llm.encoding.format"?: string;
   "llm.dimensions"?: string;
   "user.id"?: string;
-  "user.feedback.rating"?: 1 | -1;
+  "user.feedback.rating"?: number;
   "http.max.retries"?: number;
   "http.timeout"?: number;
 }
