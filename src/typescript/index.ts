@@ -19,7 +19,7 @@ export interface Attributes {
 export declare type AttributeValue = string | number | boolean | Array<null | undefined | string> | Array<null | undefined | number> | Array<null | undefined | boolean>;
 
 type CommonAttributes = {
-  "langtrace.sdk.name": "@langtrase/typescript-sdk" | "langtrace-python-sdk"
+  "langtrace.sdk.name": "@langtrase/typescript-sdk"
 }
 
 export type LLMSpanAttributes = Attributes & ( LLMSpanAttributesInternal) & CommonAttributes;
