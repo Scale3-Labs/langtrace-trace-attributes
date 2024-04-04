@@ -1,92 +1,96 @@
 {
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "LLMSpanAttributes",
-    "type": "object",
-    "additionalProperties": false,
-    "properties": {
-      "langtrace.service.name": {
-        "type": "string"
-      },
-      "langtrace.service.type": {
-        "type": "string"
-      },
-      "langtrace.service.version": {
-        "type": "string"
-      },
-      "langtrace.version": {
-        "type": "string"
-      },
-      "url.full": {
-        "type": "string"
-      },
-      "llm.api": {
-        "type": "string"
-      },
-      "llm.model": {
-        "type": "string"
-      },
-      "llm.temperature": {
-        "type": "number",
-        "format": "float"
-      },
-      "llm.top_p": {
-        "type": "number",
-        "format": "float"
-      },
-      "llm.top_k": {
-        "type": "number",
-        "format": "float"
-      },
-      "llm.user": {
-        "type": "string"
-      },
-      "llm.system.fingerprint": {
-        "type": "string"
-      },
-      "llm.prompts": {
-        "type": "string"
-      },
-      "llm.function.prompts": {
-        "type": "string"
-      },
-      "llm.responses": {
-        "type": "string"
-      },
-      "llm.token.counts": {
-        "type": "string"
-      },
-      "llm.stream": {
-        "type": "boolean"
-      },
-      "llm.encoding.format": {
-        "type": "string"
-      },
-      "llm.dimensions" : {
-        "type": "string"
-      },
-      "user.id": {
-        "type": "string"
-      },
-      "user.feedback.rating": {
-        "type": "integer",
-        "format": "int32"
-      },
-      "http.max.retries": {
-        "type": "integer",
-        "format": "int32"
-      },
-      "http.timeout": {
-        "type": "integer",
-        "format": "int64"
-      }
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LLMSpanAttributes",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "langtrace.service.name": {
+      "type": "string"
     },
-    "required": [
-      "langtrace.service.name",
-      "langtrace.service.type",
-      "langtrace.service.version",
-      "langtrace.version",
-      "url.full",
-      "llm.api",
-      "llm.prompts"
-    ]
-  }
+    "langtrace.service.type": {
+      "type": "string"
+    },
+    "langtrace.version": {
+      "type": "string"
+    },
+    "langtrace.sdk.name": {
+      "enum": [
+        "@langtrase/typescript-sdk",
+        "langtrace-python-sdk"
+      ]
+    },
+    "url.full": {
+      "type": "string"
+    },
+    "llm.api": {
+      "type": "string"
+    },
+    "llm.model": {
+      "type": "string"
+    },
+    "llm.temperature": {
+      "type": "number",
+      "format": "float"
+    },
+    "llm.top_p": {
+      "type": "number",
+      "format": "float"
+    },
+    "llm.top_k": {
+      "type": "number",
+      "format": "float"
+    },
+    "llm.user": {
+      "type": "string"
+    },
+    "llm.system.fingerprint": {
+      "type": "string"
+    },
+    "llm.prompts": {
+      "type": "string"
+    },
+    "llm.function.prompts": {
+      "type": "string"
+    },
+    "llm.responses": {
+      "type": "string"
+    },
+    "llm.token.counts": {
+      "type": "string"
+    },
+    "llm.stream": {
+      "type": "boolean"
+    },
+    "llm.encoding.format": {
+      "type": "string"
+    },
+    "llm.dimensions": {
+      "type": "string"
+    },
+    "user.id": {
+      "type": "string"
+    },
+    "user.feedback.rating": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "http.max.retries": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "http.timeout": {
+      "type": "integer",
+      "format": "int64"
+    }
+  },
+  "required": [
+    "langtrace.service.name",
+    "langtrace.service.type",
+    "langtrace.service.version",
+    "langtrace.sdk.name",
+    "langtrace.version",
+    "url.full",
+    "llm.api",
+    "llm.prompts"
+  ]
+}
