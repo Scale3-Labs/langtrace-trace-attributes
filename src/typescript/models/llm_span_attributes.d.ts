@@ -10,6 +10,7 @@ export interface LLMSpanAttributes {
   "langtrace.service.type": string;
   "langtrace.service.version": string;
   "langtrace.version": string;
+  "langtrace.sdk.name": string;
   "url.full": string;
   "llm.api": string;
   "llm.model"?: string;
