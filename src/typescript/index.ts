@@ -18,9 +18,13 @@ export interface Attributes {
 */
 export declare type AttributeValue = string | number | boolean | Array<null | undefined | string> | Array<null | undefined | number> | Array<null | undefined | boolean>;
 
-export type LLMSpanAttributes = Attributes & ( LLMSpanAttributesInternal);
-export type DatabaseSpanAttributes = Attributes & ( DatabaseSpanAttributesInternal);
-export type FrameworkSpanAttributes = Attributes & ( FrameworkSpanAttributesInternal);
+type CommonAttributes = {
+  "langtrace.sdk.name": "@langtrase/typescript-sdk" | "langtrace-python-sdk"
+}
+
+export type LLMSpanAttributes = Attributes & ( LLMSpanAttributesInternal) & CommonAttributes;
+export type DatabaseSpanAttributes = Attributes & ( DatabaseSpanAttributesInternal) & CommonAttributes;
+export type FrameworkSpanAttributes = Attributes & ( FrameworkSpanAttributesInternal) & CommonAttributes;
 
 export {
   ChromaDBMethods,

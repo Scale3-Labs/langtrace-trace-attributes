@@ -8,9 +8,8 @@
 export interface LLMSpanAttributes {
   "langtrace.service.name": string;
   "langtrace.service.type": string;
-  "langtrace.service.version": "@langtrase/typescript-sdk" | "@langtrace/python-sdk";
   "langtrace.version": string;
-  "langtrace.sdk.name": string;
+  "langtrace.sdk.name"?: string;
   "url.full": string;
   "llm.api": string;
   "llm.model"?: string;
