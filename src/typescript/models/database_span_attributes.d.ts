@@ -9,6 +9,7 @@ export interface DatabaseSpanAttributes {
   "langtrace.service.name": string;
   "langtrace.service.type": string;
   "langtrace.service.version": string;
+  "langtrace.sdk.name": "@langtrase/typescript-sdk" | "langtrace-python-sdk";
   "langtrace.version": string;
   "server.address"?: string;
   "db.operation"?: string;

@@ -14,7 +14,10 @@
       "type": "string"
     },
     "langtrace.sdk.name": {
-      "type": "string"
+      "enum": [
+        "@langtrase/typescript-sdk",
+        "langtrace-python-sdk"
+      ]
     },
     "url.full": {
       "type": "string"
@@ -84,6 +87,7 @@
     "langtrace.service.name",
     "langtrace.service.type",
     "langtrace.service.version",
+    "langtrace.sdk.name",
     "langtrace.version",
     "url.full",
     "llm.api",
