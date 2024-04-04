@@ -11,7 +11,10 @@
       "type": "string"
     },
     "langtrace.service.version": {
-      "type": "string"
+      "enum": [
+        "@langtrase/typescript-sdk",
+        "@langtrace/python-sdk"
+      ]
     },
     "langtrace.version": {
       "type": "string"
