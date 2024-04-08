@@ -19,4 +19,7 @@ export interface DatabaseSpanAttributes {
   "db.collection.name"?: string;
   "db.pinecone.top_k"?: number;
   "db.chromadb.embedding_model"?: string;
+  "user.id"?: string;
+  "user.feedback.rating"?: number;
+  "langtrace.testId"?: string;
 }
