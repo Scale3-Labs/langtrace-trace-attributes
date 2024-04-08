@@ -29,4 +29,5 @@ export interface LLMSpanAttributes {
   "user.feedback.rating"?: number;
   "http.max.retries"?: number;
   "http.timeout"?: number;
+  "langtrace.testId"?: string;
 }
