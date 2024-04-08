@@ -21,6 +21,7 @@ class LLMSpanAttributes(BaseModel):
 
     langtrace_service_name: str = Field(..., alias='langtrace.service.name')
     langtrace_service_type: str = Field(..., alias='langtrace.service.type')
+    langtrace_service_version: str = Field(..., alias='langtrace.service.version')
     langtrace_version: str = Field(..., alias='langtrace.version')
     langtrace_sdk_name: LangtraceSdkName = Field(..., alias='langtrace.sdk.name')
     url_full: str = Field(..., alias='url.full')

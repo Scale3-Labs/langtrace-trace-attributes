@@ -10,6 +10,9 @@
     "langtrace.service.type": {
       "type": "string"
     },
+    "langtrace.service.version": {
+      "type": "string"
+    },
     "langtrace.version": {
       "type": "string"
     },
