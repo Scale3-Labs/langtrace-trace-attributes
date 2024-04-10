@@ -39,3 +39,4 @@ class LLMSpanAttributes(BaseModel):
     user_feedback_rating: Optional[int] = Field(None, alias='user.feedback.rating')
     http_max_retries: Optional[int] = Field(None, alias='http.max.retries')
     http_timeout: Optional[int] = Field(None, alias='http.timeout')
+    langtrace_testId: Optional[str] = Field(None, alias='langtrace.testId')

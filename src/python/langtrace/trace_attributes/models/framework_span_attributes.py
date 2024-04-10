@@ -26,3 +26,6 @@ class FrameworkSpanAttributes(BaseModel):
     llamaindex_task_name: Optional[str] = Field(None, alias='llamaindex.task.name')
     llamaindex_inputs: Optional[str] = Field(None, alias='llamaindex.inputs')
     llamaindex_outputs: Optional[str] = Field(None, alias='llamaindex.outputs')
+    user_id: Optional[str] = Field(None, alias='user.id')
+    user_feedback_rating: Optional[int] = Field(None, alias='user.feedback.rating')
+    langtrace_testId: Optional[str] = Field(None, alias='langtrace.testId')

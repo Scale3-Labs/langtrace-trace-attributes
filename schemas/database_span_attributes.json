@@ -43,6 +43,16 @@
     },
     "db.chromadb.embedding_model": {
       "type": "string"
+    },
+    "user.id": {
+      "type": "string"
+    },
+    "user.feedback.rating": {
+      "type": "integer",
+      "format": "int32"
+    },
+    "langtrace.testId": {
+      "type": "string"
     }
   },
   "required": [

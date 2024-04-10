@@ -30,3 +30,6 @@ class DatabaseSpanAttributes(BaseModel):
     db_chromadb_embedding_model: Optional[str] = Field(
         None, alias='db.chromadb.embedding_model'
     )
+    user_id: Optional[str] = Field(None, alias='user.id')
+    user_feedback_rating: Optional[int] = Field(None, alias='user.feedback.rating')
+    langtrace_testId: Optional[str] = Field(None, alias='langtrace.testId')

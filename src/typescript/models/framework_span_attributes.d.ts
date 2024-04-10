@@ -17,4 +17,7 @@ export interface FrameworkSpanAttributes {
   "llamaindex.task.name"?: string;
   "llamaindex.inputs"?: string;
   "llamaindex.outputs"?: string;
+  "user.id"?: string;
+  "user.feedback.rating"?: number;
+  "langtrace.testId"?: string;
 }
