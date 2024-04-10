@@ -8,8 +8,8 @@
 export interface FrameworkSpanAttributes {
   "langtrace.service.name": string;
   "langtrace.service.type": string;
-  "langtrace.service.version": string;
-  "langtrace.sdk.name": "@langtrase/typescript-sdk" | "langtrace-python-sdk";
+  "langtrace.service.version"?: string;
+  "langtrace.sdk.name": string;
   "langtrace.version": string;
   "langchain.task.name"?: string;
   "langchain.inputs"?: string;
