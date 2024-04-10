@@ -10,14 +10,14 @@
     "langtrace.service.type": {
       "type": "string"
     },
+    "langtrace.service.version": {
+      "type": "string"
+    },
     "langtrace.version": {
       "type": "string"
     },
     "langtrace.sdk.name": {
-      "enum": [
-        "@langtrase/typescript-sdk",
-        "langtrace-python-sdk"
-      ]
+      "type": "string"
     },
     "url.full": {
       "type": "string"
@@ -86,7 +86,6 @@
   "required": [
     "langtrace.service.name",
     "langtrace.service.type",
-    "langtrace.service.version",
     "langtrace.sdk.name",
     "langtrace.version",
     "url.full",
