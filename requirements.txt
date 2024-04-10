@@ -117,7 +117,7 @@ uritemplate==4.1.1
 urllib3==1.25.11
 wcwidth==0.1.9
 websocket-client==0.59.0
-Werkzeug==2.3.7
+Werkzeug==2.3.8
 wrapt==1.16.0
 yarl==1.8.1
 zipp==3.17.0
@@ -254,7 +254,7 @@ uritemplate==4.1.1
 urllib3==1.26.18
 wcwidth==0.1.9
 websocket-client==0.59.0
-Werkzeug==2.3.7
+Werkzeug==2.3.8
 wrapt==1.16.0
 yarl==1.8.1
 zipp==3.17.0
