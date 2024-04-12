@@ -67,6 +67,54 @@
     "llm.dimensions": {
       "type": "string"
     },
+    "llm.generation_id": {
+      "type": "string"
+    },
+    "llm.response_id": {
+      "type": "string"
+    },
+    "llm.citations": {
+      "type": "string"
+    },
+    "llm.documents": {
+      "type": "string"
+    },
+    "llm.is_search_required": {
+      "type": "boolean"
+    },
+    "llm.search_results": {
+      "type": "string"
+    },
+    "llm.tool_calls": {
+      "type": "string"
+    },
+    "llm.max_tokens": {
+      "type": "string"
+    },
+    "llm.max_input_tokens": {
+      "type": "string"
+    },
+    "llm.conversation_id": {
+      "type": "string"
+    },
+    "llm.seed": {
+      "type": "string"
+    },
+    "llm.frequency_penalty": {
+      "type": "string"
+    },
+    "llm.presence_penalty": {
+      "type": "string"
+    },
+    "llm.connectors": {
+      "type": "string"
+    },
+    "llm.tools": {
+      "type": "string"
+    },
+    "llm.tool_results": {
+      "type": "string"
+    },
     "user.id": {
       "type": "string"
     },

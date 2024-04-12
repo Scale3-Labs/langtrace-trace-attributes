@@ -35,7 +35,7 @@ Before you begin, make sure you have the following installed on your system:
 To generate Python models from a JSON schema, use the `generate_python.sh` script located in the `scripts` directory. This script takes the path to a JSON schema file as an argument and generates a Python model in the `generated/python` directory.
 
 ```sh
-./scripts/generate_python.sh schemas/openai_span_attributes.json
+./scripts/generate_python.sh schemas/llm_span_attributes.json
 ```
 
 ### TypeScript Interfaces
@@ -44,8 +44,7 @@ To generate TypeScript interfaces from a JSON schema, use the `schema_to_interfa
 t
 
 ```sh
-ts-node scripts/generate_typescript.ts schemas/langtrace_span_attributes.json
-ts-node scripts/generate_typescript.ts schemas/openai_span_attributes.json
+ts-node scripts/generate_typescript.ts schemas/llm_span_attributes.json
 ```
 
 To include instructions for building and uploading your Python package to PyPI, as well as how to automate this process using GitHub Actions, you can update your `README.md` file with the following sections:
