@@ -24,7 +24,7 @@ datamodel-code-generator==0.25.4
 Deprecated==1.2.14
 discord==2.1.0
 discord.py==2.1.0
-dnspython==2.3.0
+dnspython==2.6.1
 docker==4.4.4
 docker-compose==1.25.5
 dockerpty==0.4.1
@@ -147,7 +147,7 @@ datamodel-code-generator==0.25.4
 Deprecated==1.2.14
 discord==2.1.0
 discord.py==2.1.0
-dnspython==2.3.0
+dnspython==2.6.1
 docker==4.4.4
 docker-compose==1.25.5
 dockerpty==0.4.1
