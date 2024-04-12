@@ -42,6 +42,9 @@ export interface LLMSpanAttributes {
   "llm.connectors"?: string;
   "llm.tools"?: string;
   "llm.tool_results"?: string;
+  "llm.embedding_dataset_id"?: string;
+  "llm.embedding_input_type"?: string;
+  "llm.embedding_job_name"?: string;
   "user.id"?: string;
   "user.feedback.rating"?: number;
   "http.max.retries"?: number;

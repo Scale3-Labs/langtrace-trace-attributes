@@ -115,6 +115,15 @@
     "llm.tool_results": {
       "type": "string"
     },
+    "llm.embedding_dataset_id": {
+      "type": "string"
+    },
+    "llm.embedding_input_type": {
+      "type": "string"
+    },
+    "llm.embedding_job_name": {
+      "type": "string"
+    },
     "user.id": {
       "type": "string"
     },
