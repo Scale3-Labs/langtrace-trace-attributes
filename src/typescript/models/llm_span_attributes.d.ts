@@ -20,7 +20,6 @@ export interface LLMSpanAttributes {
   "llm.user"?: string;
   "llm.system.fingerprint"?: string;
   "llm.prompts": string;
-  "llm.function.prompts"?: string;
   "llm.responses"?: string;
   "llm.token.counts"?: string;
   "llm.stream"?: boolean;
