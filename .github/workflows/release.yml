@@ -1,0 +1,36 @@
+name: Build & Release
+run-name: "Releasing"
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - closed
+
+jobs:          
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Github Checkout
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+            python-version: '3.x'
+
+      - name: Install hatch
+        run: | 
+          pip install hatch
+
+      - name: Build SDK
+        run: | 
+          hatch build
+
+      - name: Publish Python 🐍 distributions 📦 to PyPI
+        uses: pypa/gh-action-pypi-publish@master
+        with:
+          password: ${{ secrets.PYPI_TOKEN }}
