@@ -24,7 +24,7 @@ export interface LLMSpanAttributes {
   "llm.responses"?: string;
   "llm.token.counts"?: string;
   "llm.stream"?: boolean;
-  "llm.encoding.format"?: string;
+  "llm.encoding.formats"?: string;
   "llm.dimensions"?: string;
   "llm.generation_id"?: string;
   "llm.response_id"?: string;
@@ -42,6 +42,7 @@ export interface LLMSpanAttributes {
   "llm.connectors"?: string;
   "llm.tools"?: string;
   "llm.tool_results"?: string;
+  "llm.embedding_inputs"?: string;
   "llm.embedding_dataset_id"?: string;
   "llm.embedding_input_type"?: string;
   "llm.embedding_job_name"?: string;
