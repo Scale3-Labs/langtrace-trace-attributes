@@ -49,9 +49,6 @@
     "llm.prompts": {
       "type": "string"
     },
-    "llm.function.prompts": {
-      "type": "string"
-    },
     "llm.responses": {
       "type": "string"
     },
@@ -61,7 +58,7 @@
     "llm.stream": {
       "type": "boolean"
     },
-    "llm.encoding.format": {
+    "llm.encoding.formats": {
       "type": "string"
     },
     "llm.dimensions": {
@@ -113,6 +110,9 @@
       "type": "string"
     },
     "llm.tool_results": {
+      "type": "string"
+    },
+    "llm.embedding_inputs": {
       "type": "string"
     },
     "llm.embedding_dataset_id": {
