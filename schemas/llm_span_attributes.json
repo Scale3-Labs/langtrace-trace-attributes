@@ -124,6 +124,12 @@
     "llm.embedding_job_name": {
       "type": "string"
     },
+    "llm.retrieval.query": {
+      "type": "string"
+    },
+    "llm.retrieval.results": {
+      "type": "string"
+    },
     "user.id": {
       "type": "string"
     },
@@ -149,7 +155,6 @@
     "langtrace.sdk.name",
     "langtrace.version",
     "url.full",
-    "llm.api",
-    "llm.prompts"
+    "llm.api"
   ]
 }
