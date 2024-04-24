@@ -19,7 +19,8 @@ export interface LLMSpanAttributes {
   "llm.top_k"?: number;
   "llm.user"?: string;
   "llm.system.fingerprint"?: string;
-  "llm.prompts": string;
+  "llm.prompts"?: string;
+  "llm.function.prompts"?: string;
   "llm.responses"?: string;
   "llm.token.counts"?: string;
   "llm.stream"?: boolean;
@@ -45,6 +46,8 @@ export interface LLMSpanAttributes {
   "llm.embedding_dataset_id"?: string;
   "llm.embedding_input_type"?: string;
   "llm.embedding_job_name"?: string;
+  "llm.retrieval.query"?: string;
+  "llm.retrieval.results"?: string;
   "user.id"?: string;
   "user.feedback.rating"?: number;
   "http.max.retries"?: number;
