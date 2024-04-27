@@ -28,6 +28,18 @@
     "langchain.outputs": {
       "type": "string"
     },
+    "langgraph.entrypoint": {
+      "type": "string"
+    },
+    "langgraph.node.name": {
+      "type": "string"
+    },
+    "langgraph.edge.name": {
+      "type": "string"
+    },
+    "langgraph.finishpoint": {
+      "type": "string"
+    },
     "llamaindex.task.name": {
       "type": "string"
     },
