@@ -27,3 +27,23 @@ export enum PineconeMethods {
   DELETE_MANY = "pinecone.index.deleteMany",
   DELETE_ALL = "pinecone.index.deleteAll",
 }
+
+export enum QdrantDBMethods {
+  ADD = "qdrantdb.add",
+  GET_COLLECTION = "qdrantdb.get_collection",
+  GET_COLLECTIONS = "qdrantdb.get_collections",
+  QUERY = "qdrantdb.query",
+  QUERY_BATCH = "qdrantdb.query_batch",
+  DELETE = "qdrantdb.delete",
+  DISCOVER = "qdrantdb.discover",
+  DISCOVER_BATCH = "qdrantdb.discover_batch",
+  RECOMMEND = "qdrantdb.recommend",
+  RECOMMEND_BATCH = "qdrantdb.recommend_batch",
+  RETRIEVE = "qdrantdb.retrieve",
+  SEARCH = "qdrantdb.search",
+  SEARCH_BATCH = "qdrantdb.search_batch",
+  UPSERT = "qdrantdb.upsert",
+  COUNT = "qdrantdb.count",
+  UPDATE_COLLECTION = "qdrantdb.update_collection",
+  UPDATE_VECTORS = "qdrantdb.update_vectors",
+}

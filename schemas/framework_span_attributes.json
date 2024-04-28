@@ -31,13 +31,16 @@
     "langgraph.entrypoint": {
       "type": "string"
     },
-    "langgraph.node.name": {
+    "langgraph.node": {
       "type": "string"
     },
-    "langgraph.edge.name": {
+    "langgraph.edge": {
       "type": "string"
     },
     "langgraph.finishpoint": {
+      "type": "string"
+    },
+    "langgraph.task.name": {
       "type": "string"
     },
     "llamaindex.task.name": {

@@ -30,6 +30,26 @@ class ChromaDBMethods(Enum):
     COUNT = "chromadb.collection.count"
 
 
+class QdrantDBMethods(Enum):
+    ADD = "qdrantdb.add"
+    GET_COLLECTION = "qdrantdb.get_collection"
+    GET_COLLECTIONS = "qdrantdb.get_collections"
+    QUERY = "qdrantdb.query"
+    QUERY_BATCH = "qdrantdb.query_batch"
+    DELETE = "qdrantdb.delete"
+    DISCOVER = "qdrantdb.discover"
+    DISCOVER_BATCH = "qdrantdb.discover_batch"
+    RECOMMEND = "qdrantdb.recommend"
+    RECOMMEND_BATCH = "qdrantdb.recommend_batch"
+    RETRIEVE = "qdrantdb.retrieve"
+    SEARCH = "qdrantdb.search"
+    SEARCH_BATCH = "qdrantdb.search_batch"
+    UPSERT = "qdrantdb.upsert"
+    COUNT = "qdrantdb.count"
+    UPDATE_COLLECTION = "qdrantdb.update_collection"
+    UPDATE_VECTORS = "qdrantdb.update_vectors"
+
+
 class PineconeMethods(Enum):
     UPSERT = "pinecone.index.upsert"
     QUERY = "pinecone.index.query"
