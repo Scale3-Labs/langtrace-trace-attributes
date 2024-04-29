@@ -27,4 +27,5 @@ export {
   Event,
   OpenAIMethods,
   PineconeMethods,
+  QdrantDBMethods
 } from "./types";
