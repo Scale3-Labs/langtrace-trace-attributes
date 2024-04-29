@@ -47,6 +47,9 @@ jobs:
 
       - name: Install Node.js dependencies
         run: npm ci
+        
+      - name: Install ncp
+        run: npm install ncp
 
       - name: Configure npm for publish
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
