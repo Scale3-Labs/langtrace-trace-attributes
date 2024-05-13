@@ -1,5 +1,5 @@
 name: Build & Release
-run-name: "Releasing"
+run-name: 'Releasing'
 
 on:
   pull_request:
@@ -8,8 +8,8 @@ on:
     types:
       - closed
 
-jobs:          
-  publish:
+jobs:
+  publish-python-sdk:
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -20,17 +20,42 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v2
         with:
-            python-version: '3.x'
+          python-version: '3.x'
 
       - name: Install hatch
-        run: | 
+        run: |
           pip install hatch
 
       - name: Build SDK
-        run: | 
+        run: |
           hatch build
 
       - name: Publish Python 🐍 distributions 📦 to PyPI
         uses: pypa/gh-action-pypi-publish@master
         with:
           password: ${{ secrets.PYPI_TOKEN }}
+
+  publish-node-sdk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 20
+          registry-url: "https://registry.npmjs.org"
+          cache: 'npm'
+
+      - name: Install Node.js dependencies
+        run: npm ci
+        
+      - name: Install ncp
+        run: npm install ncp
+
+      - name: Configure npm for publish
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+
+      - name: Release package
+        run: npm run build:ts && npm run publish:ts
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

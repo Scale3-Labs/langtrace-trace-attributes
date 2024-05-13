@@ -28,12 +28,11 @@ class LLMSpanAttributes(BaseModel):
     llm_top_k: Optional[float] = Field(None, alias='llm.top_k')
     llm_user: Optional[str] = Field(None, alias='llm.user')
     llm_system_fingerprint: Optional[str] = Field(None, alias='llm.system.fingerprint')
-    llm_prompts: str = Field(..., alias='llm.prompts')
-    llm_function_prompts: Optional[str] = Field(None, alias='llm.function.prompts')
+    llm_prompts: Optional[str] = Field(None, alias='llm.prompts')
     llm_responses: Optional[str] = Field(None, alias='llm.responses')
     llm_token_counts: Optional[str] = Field(None, alias='llm.token.counts')
     llm_stream: Optional[bool] = Field(None, alias='llm.stream')
-    llm_encoding_format: Optional[str] = Field(None, alias='llm.encoding.format')
+    llm_encoding_formats: Optional[str] = Field(None, alias='llm.encoding.formats')
     llm_dimensions: Optional[str] = Field(None, alias='llm.dimensions')
     llm_generation_id: Optional[str] = Field(None, alias='llm.generation_id')
     llm_response_id: Optional[str] = Field(None, alias='llm.response_id')
@@ -51,6 +50,7 @@ class LLMSpanAttributes(BaseModel):
     llm_connectors: Optional[str] = Field(None, alias='llm.connectors')
     llm_tools: Optional[str] = Field(None, alias='llm.tools')
     llm_tool_results: Optional[str] = Field(None, alias='llm.tool_results')
+    llm_embedding_inputs: Optional[str] = Field(None, alias='llm.embedding_inputs')
     llm_embedding_dataset_id: Optional[str] = Field(
         None, alias='llm.embedding_dataset_id'
     )
@@ -58,6 +58,8 @@ class LLMSpanAttributes(BaseModel):
         None, alias='llm.embedding_input_type'
     )
     llm_embedding_job_name: Optional[str] = Field(None, alias='llm.embedding_job_name')
+    llm_retrieval_query: Optional[str] = Field(None, alias='llm.retrieval.query')
+    llm_retrieval_results: Optional[str] = Field(None, alias='llm.retrieval.results')
     user_id: Optional[str] = Field(None, alias='user.id')
     http_max_retries: Optional[int] = Field(None, alias='http.max.retries')
     http_timeout: Optional[int] = Field(None, alias='http.timeout')

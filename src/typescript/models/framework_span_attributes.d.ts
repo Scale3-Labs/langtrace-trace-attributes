@@ -14,6 +14,11 @@ export interface FrameworkSpanAttributes {
   "langchain.task.name"?: string;
   "langchain.inputs"?: string;
   "langchain.outputs"?: string;
+  "langgraph.entrypoint"?: string;
+  "langgraph.node"?: string;
+  "langgraph.edge"?: string;
+  "langgraph.finishpoint"?: string;
+  "langgraph.task.name"?: string;
   "llamaindex.task.name"?: string;
   "llamaindex.inputs"?: string;
   "llamaindex.outputs"?: string;

@@ -49,9 +49,6 @@
     "llm.prompts": {
       "type": "string"
     },
-    "llm.function.prompts": {
-      "type": "string"
-    },
     "llm.responses": {
       "type": "string"
     },
@@ -61,7 +58,7 @@
     "llm.stream": {
       "type": "boolean"
     },
-    "llm.encoding.format": {
+    "llm.encoding.formats": {
       "type": "string"
     },
     "llm.dimensions": {
@@ -115,6 +112,9 @@
     "llm.tool_results": {
       "type": "string"
     },
+    "llm.embedding_inputs": {
+      "type": "string"
+    },
     "llm.embedding_dataset_id": {
       "type": "string"
     },
@@ -122,6 +122,12 @@
       "type": "string"
     },
     "llm.embedding_job_name": {
+      "type": "string"
+    },
+    "llm.retrieval.query": {
+      "type": "string"
+    },
+    "llm.retrieval.results": {
       "type": "string"
     },
     "user.id": {
@@ -145,7 +151,6 @@
     "langtrace.sdk.name",
     "langtrace.version",
     "url.full",
-    "llm.api",
-    "llm.prompts"
+    "llm.api"
   ]
 }
