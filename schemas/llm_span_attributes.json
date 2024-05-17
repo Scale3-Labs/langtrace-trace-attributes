@@ -130,13 +130,6 @@
     "llm.retrieval.results": {
       "type": "string"
     },
-    "user.id": {
-      "type": "string"
-    },
-    "user.feedback.rating": {
-      "type": "integer",
-      "format": "int32"
-    },
     "http.max.retries": {
       "type": "integer",
       "format": "int32"

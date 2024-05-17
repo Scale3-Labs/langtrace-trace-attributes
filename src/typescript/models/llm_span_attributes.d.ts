@@ -47,8 +47,6 @@ export interface LLMSpanAttributes {
   "llm.embedding_job_name"?: string;
   "llm.retrieval.query"?: string;
   "llm.retrieval.results"?: string;
-  "user.id"?: string;
-  "user.feedback.rating"?: number;
   "http.max.retries"?: number;
   "http.timeout"?: number;
   "langtrace.testId"?: string;
