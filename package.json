@@ -11,6 +11,5 @@
   "scripts": {
     "build:ts": "cd src/typescript && npm run build",
     "publish:ts": "cd src/typescript && npm publish --access public"
-  },
-  "version": "0.1.1"
+  }
 }
