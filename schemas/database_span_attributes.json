@@ -22,6 +22,12 @@
     "server.address": {
       "type": "string"
     },
+    "db.query": {
+      "type": "string"
+    },
+    "db.response": {
+      "type": "string"
+    },
     "db.operation": {
       "type": "string"
     },
@@ -37,19 +43,12 @@
     "db.collection.name": {
       "type": "string"
     },
-    "db.pinecone.top_k": {
+    "db.top_k": {
       "type": "number",
       "format": "float"
     },
-    "db.chromadb.embedding_model": {
+    "db.embedding_model": {
       "type": "string"
-    },
-    "user.id": {
-      "type": "string"
-    },
-    "user.feedback.rating": {
-      "type": "integer",
-      "format": "int32"
     },
     "langtrace.testId": {
       "type": "string"
@@ -59,6 +58,7 @@
     "langtrace.service.name",
     "langtrace.service.type",
     "langtrace.sdk.name",
+    "db.query",
     "langtrace.version",
     "db.system"
   ]
