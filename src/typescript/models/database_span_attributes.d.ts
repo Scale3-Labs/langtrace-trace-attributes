@@ -12,14 +12,14 @@ export interface DatabaseSpanAttributes {
   "langtrace.sdk.name": string;
   "langtrace.version": string;
   "server.address"?: string;
+  "db.query": string;
+  "db.response"?: string;
   "db.operation"?: string;
   "db.system": string;
   "db.namespace"?: string;
   "db.index"?: string;
   "db.collection.name"?: string;
-  "db.pinecone.top_k"?: number;
-  "db.chromadb.embedding_model"?: string;
-  "user.id"?: string;
-  "user.feedback.rating"?: number;
+  "db.top_k"?: number;
+  "db.embedding_model"?: string;
   "langtrace.testId"?: string;
 }
