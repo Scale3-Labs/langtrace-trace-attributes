@@ -57,6 +57,19 @@ class PineconeMethods(Enum):
     DELETE = "pinecone.index.delete"
 
 
+class WeaviateMethods(Enum):
+    QUERY_BM25 = "weaviate.collections.queries.bm25"
+    QUERY_FETCH_OBJECT_BY_ID = "weaviate.collections.queries.fetch_object_by_id"
+    QUERY_FETCH_OBJECTS = "weaviate.collections.queries.fetch_objects"
+    QUERY_HYBRID = "weaviate.collections.queries.hybrid"
+    QUERY_NEAR_IMAGE = "weaviate.collections.queries.near_image"
+    QUERY_NEAR_MEDIA = "weaviate.collections.queries.near_media"
+    QUERY_NEAR_OBJECT = "weaviate.collections.queries.near_object"
+    QUERY_NEAR_TEXT = "weaviate.collections.queries.near_text"
+    QUERY_NEAR_VECTOR = "weaviate.collections.queries.near_vector"
+    COLLECTIONS_CREATE = "weaviate.collections.create"
+
+
 # Export only what you want to be accessible directly through `import my_package`
 __all__ = ['LLMSpanAttributes', 'DatabaseSpanAttributes', 'FrameworkSpanAttributes', 'Event',
-           'OpenAIMethods', 'ChromaDBMethods', 'PineconeMethods']
+           'OpenAIMethods', 'ChromaDBMethods', 'PineconeMethods', 'WeaviateMethods']
