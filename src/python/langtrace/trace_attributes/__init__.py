@@ -67,7 +67,7 @@ class WeaviateMethods(Enum):
     QUERY_NEAR_OBJECT = "weaviate.collections.queries.near_object"
     QUERY_NEAR_TEXT = "weaviate.collections.queries.near_text"
     QUERY_NEAR_VECTOR = "weaviate.collections.queries.near_vector"
-    COLLECTIONS_CREATE = "weaviate.collections.create"
+    COLLECTIONS_OPERATIONS = "weaviate.collections.collections"
 
 
 # Export only what you want to be accessible directly through `import my_package`
