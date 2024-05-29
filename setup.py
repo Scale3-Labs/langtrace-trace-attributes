@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name='trace-attributes',  # Choose a unique name for PyPI
-    version='4.0.2',
+    version='4.0.3',
     author='Karthik Kalyanaraman',
     author_email='karthik@scale3labs.com',
     description='LangTrace - Trace Attributes',
@@ -13,7 +13,6 @@ setup(
     packages=find_packages(where='src/python'),
     install_requires=[
         'pydantic>=1.8',  # Example dependency, adjust according to your project's needs
-        'typing'
     ],
     python_requires='>=3.6',
     classifiers=[
