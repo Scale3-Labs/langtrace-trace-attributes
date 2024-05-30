@@ -71,5 +71,13 @@ class WeaviateMethods(Enum):
 
 
 # Export only what you want to be accessible directly through `import my_package`
-__all__ = ['LLMSpanAttributes', 'DatabaseSpanAttributes', 'FrameworkSpanAttributes', 'Event',
-           'OpenAIMethods', 'ChromaDBMethods', 'PineconeMethods', 'WeaviateMethods']
+__all__ = [
+    "LLMSpanAttributes",
+    "DatabaseSpanAttributes",
+    "FrameworkSpanAttributes",
+    "Event",
+    "OpenAIMethods",
+    "ChromaDBMethods",
+    "PineconeMethods",
+    "WeaviateMethods",
+]
