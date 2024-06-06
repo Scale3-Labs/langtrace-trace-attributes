@@ -130,6 +130,12 @@
     "llm.retrieval.results": {
       "type": "string"
     },
+    "llm.image.size": {
+      "type": "string"
+    },
+    "llm.response_format": {
+      "type": "string"
+    },
     "http.max.retries": {
       "type": "integer",
       "format": "int32"
