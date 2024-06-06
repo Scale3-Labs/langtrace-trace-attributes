@@ -21,11 +21,3 @@ export declare type AttributeValue = string | number | boolean | Array<null | un
 export type LLMSpanAttributes = Attributes & ( LLMSpanAttributesInternal);
 export type DatabaseSpanAttributes = Attributes & ( DatabaseSpanAttributesInternal);
 export type FrameworkSpanAttributes = Attributes & ( FrameworkSpanAttributesInternal);
-
-export {
-  ChromaDBMethods,
-  Event,
-  OpenAIMethods,
-  PineconeMethods,
-  QdrantDBMethods
-} from "./types";

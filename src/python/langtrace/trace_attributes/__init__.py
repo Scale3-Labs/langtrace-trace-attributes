@@ -16,6 +16,7 @@ class Event(Enum):
 class OpenAIMethods(Enum):
     CHAT_COMPLETION = "openai.chat.completions.create"
     IMAGES_GENERATION = "openai.images.generate"
+    IMAGES_EDIT = "openai.images.edit"
     EMBEDDINGS_CREATE = "openai.embeddings.create"
 
 
