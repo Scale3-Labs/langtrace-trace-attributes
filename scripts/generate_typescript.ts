@@ -35,6 +35,7 @@ TJS.compile(schema, schemaBaseName)
       fs.mkdirSync(dirname, { recursive: true })
     }
     fs.writeFileSync(outputFilePath, ts);
+    fs.cpSync("schemas", "src/typescript/schemas", {recursive: true})
   })
   .catch((error) => console.error(error));
 
