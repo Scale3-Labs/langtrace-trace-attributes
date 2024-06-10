@@ -1,0 +1,65 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "FrameworkSpanAttributes",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "langtrace.service.name": {
+      "type": "string"
+    },
+    "langtrace.service.type": {
+      "type": "string"
+    },
+    "langtrace.service.version": {
+      "type": "string"
+    },
+    "langtrace.sdk.name": {
+      "type": "string"
+    },
+    "langtrace.version": {
+      "type": "string"
+    },
+    "langchain.task.name": {
+      "type": "string"
+    },
+    "langchain.inputs": {
+      "type": "string"
+    },
+    "langchain.outputs": {
+      "type": "string"
+    },
+    "langgraph.entrypoint": {
+      "type": "string"
+    },
+    "langgraph.node": {
+      "type": "string"
+    },
+    "langgraph.edge": {
+      "type": "string"
+    },
+    "langgraph.finishpoint": {
+      "type": "string"
+    },
+    "langgraph.task.name": {
+      "type": "string"
+    },
+    "llamaindex.task.name": {
+      "type": "string"
+    },
+    "llamaindex.inputs": {
+      "type": "string"
+    },
+    "llamaindex.outputs": {
+      "type": "string"
+    },
+    "langtrace.testId": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "langtrace.service.name",
+    "langtrace.service.type",
+    "langtrace.sdk.name",
+    "langtrace.version"
+  ]
+}
