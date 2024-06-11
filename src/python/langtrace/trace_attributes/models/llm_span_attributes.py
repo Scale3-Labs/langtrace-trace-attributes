@@ -10,7 +10,7 @@ from pydantic import BaseModel, ConfigDict, Field
 
 
 class LLMSpanAttributes(BaseModel):
-    model_config = ConfigDict(extra="forbid")
+    model_config = ConfigDict(extra="allow")
 
     langtrace_service_name: str = Field(..., alias="langtrace.service.name")
     langtrace_service_type: str = Field(..., alias="langtrace.service.type")
