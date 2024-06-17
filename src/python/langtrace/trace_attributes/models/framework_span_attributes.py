@@ -31,3 +31,43 @@ class FrameworkSpanAttributes(BaseModel):
     llamaindex_inputs: Optional[str] = Field(None, alias="llamaindex.inputs")
     llamaindex_outputs: Optional[str] = Field(None, alias="llamaindex.outputs")
     langtrace_testId: Optional[str] = Field(None, alias="langtrace.testId")
+    dspy_optimizer: Optional[str] = Field(None, alias="dspy.optimizer")
+    dspy_optimizer_module: Optional[str] = Field(None, alias="dspy.optimizer.module")
+    dspy_optimizer_module_prog: Optional[str] = Field(
+        None, alias="dspy.optimizer.module.prog"
+    )
+    dspy_optimizer_metric: Optional[str] = Field(None, alias="dspy.optimizer.metric")
+    dspy_optimizer_trainset: Optional[str] = Field(
+        None, alias="dspy.optimizer.trainset"
+    )
+    dspy_optimizer_config: Optional[str] = Field(None, alias="dspy.optimizer.config")
+    dspy_signature_name: Optional[str] = Field(None, alias="dspy.signature.name")
+    dspy_signature: Optional[str] = Field(None, alias="dspy.signature")
+    dspy_signature_args: Optional[str] = Field(None, alias="dspy.signature.args")
+    dspy_signature_result: Optional[str] = Field(None, alias="dspy.signature.result")
+    dspy_evaluate_devset: Optional[str] = Field(None, alias="dspy.evaluate.devset")
+    dspy_evaluate_display: Optional[str] = Field(None, alias="dspy.evaluate.display")
+    dspy_evaluate_num_threads: Optional[str] = Field(
+        None, alias="dspy.evaluate.num_threads"
+    )
+    dspy_evaluate_return_outputs: Optional[str] = Field(
+        None, alias="dspy.evaluate.return_outputs"
+    )
+    dspy_evaluate_display_table: Optional[str] = Field(
+        None, alias="dspy.evaluate.display_table"
+    )
+    dspy_evaluate_display_progress: Optional[str] = Field(
+        None, alias="dspy.evaluate.display_progress"
+    )
+    dspy_evaluate_metric: Optional[str] = Field(None, alias="dspy.evaluate.metric")
+    dspy_evaluate_error_count: Optional[str] = Field(
+        None, alias="dspy.evaluate.error_count"
+    )
+    dspy_evaluate_error_lock: Optional[str] = Field(
+        None, alias="dspy.evaluate.error_lock"
+    )
+    dspy_evaluate_max_errors: Optional[str] = Field(
+        None, alias="dspy.evaluate.max_errors"
+    )
+    dspy_evaluate_args: Optional[str] = Field(None, alias="dspy.evaluate.args")
+    dspy_evaluate_result: Optional[str] = Field(None, alias="dspy.evaluate.result")

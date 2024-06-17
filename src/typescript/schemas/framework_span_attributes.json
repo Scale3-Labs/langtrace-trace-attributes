@@ -54,6 +54,72 @@
     },
     "langtrace.testId": {
       "type": "string"
+    },
+    "dspy.optimizer": {
+      "type": "string"
+    },
+    "dspy.optimizer.module": {
+      "type": "string"
+    },
+    "dspy.optimizer.module.prog": {
+      "type": "string"
+    },
+    "dspy.optimizer.metric": {
+      "type": "string"
+    },
+    "dspy.optimizer.trainset": {
+      "type": "string"
+    },
+    "dspy.optimizer.config": {
+      "type": "string"
+    },
+    "dspy.signature.name": {
+      "type": "string"
+    },
+    "dspy.signature": {
+      "type": "string"
+    },
+    "dspy.signature.args": {
+      "type": "string"
+    },
+    "dspy.signature.result": {
+      "type": "string"
+    },
+    "dspy.evaluate.devset": {
+      "type": "string"
+    },
+    "dspy.evaluate.display": {
+      "type": "string"
+    },
+    "dspy.evaluate.num_threads": {
+      "type": "string"
+    },
+    "dspy.evaluate.return_outputs": {
+      "type": "string"
+    },
+    "dspy.evaluate.display_table": {
+      "type": "string"
+    },
+    "dspy.evaluate.display_progress": {
+      "type": "string"
+    },
+    "dspy.evaluate.metric": {
+      "type": "string"
+    },
+    "dspy.evaluate.error_count": {
+      "type": "string"
+    },
+    "dspy.evaluate.error_lock": {
+      "type": "string"
+    },
+    "dspy.evaluate.max_errors": {
+      "type": "string"
+    },
+    "dspy.evaluate.args": {
+      "type": "string"
+    },
+    "dspy.evaluate.result": {
+      "type": "string"
     }
   },
   "required": [
