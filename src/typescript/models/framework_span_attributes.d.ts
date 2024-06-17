@@ -23,4 +23,26 @@ export interface FrameworkSpanAttributes {
   "llamaindex.inputs"?: string;
   "llamaindex.outputs"?: string;
   "langtrace.testId"?: string;
+  "dspy.optimizer"?: string;
+  "dspy.optimizer.module"?: string;
+  "dspy.optimizer.module.prog"?: string;
+  "dspy.optimizer.metric"?: string;
+  "dspy.optimizer.trainset"?: string;
+  "dspy.optimizer.config"?: string;
+  "dspy.signature.name"?: string;
+  "dspy.signature"?: string;
+  "dspy.signature.args"?: string;
+  "dspy.signature.result"?: string;
+  "dspy.evaluate.devset"?: string;
+  "dspy.evaluate.display"?: string;
+  "dspy.evaluate.num_threads"?: string;
+  "dspy.evaluate.return_outputs"?: string;
+  "dspy.evaluate.display_table"?: string;
+  "dspy.evaluate.display_progress"?: string;
+  "dspy.evaluate.metric"?: string;
+  "dspy.evaluate.error_count"?: string;
+  "dspy.evaluate.error_lock"?: string;
+  "dspy.evaluate.max_errors"?: string;
+  "dspy.evaluate.args"?: string;
+  "dspy.evaluate.result"?: string;
 }
