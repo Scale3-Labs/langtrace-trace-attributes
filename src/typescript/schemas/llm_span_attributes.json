@@ -5,13 +5,16 @@
   "additionalProperties": false,
   "properties": {
     "langtrace.service.name": {
-      "type": "string"
+      "type": "string",
+      "description": "Name of the service. Includes all supported service providers by langtrace"
     },
     "langtrace.service.type": {
-      "type": "string"
+      "type": "string",
+      "description": "Type of the service. Allowed values: [llm, vectordb, framework]"
     },
     "langtrace.service.version": {
-      "type": "string"
+      "type": "string",
+      "description": "Version of the service provider client"
     },
     "langtrace.version": {
       "type": "string"
@@ -20,121 +23,149 @@
       "type": "string"
     },
     "url.full": {
-      "type": "string"
+      "type": "string",
+      "description": "Full URL of the request"
     },
-    "llm.api": {
-      "type": "string"
+    "url.path": {
+      "type": "string",
+      "description": "Path of the request"
     },
-    "llm.model": {
-      "type": "string"
+    "gen_ai.request.model": {
+      "type": "string",
+      "description": "Model name from the input request"
     },
-    "llm.temperature": {
+    "gen_ai.response.model": {
+      "type": "string",
+      "description": "Model name from the response"
+    },
+    "gen_ai.request.temperature": {
       "type": "number",
-      "format": "float"
+      "format": "float",
+      "description": "Temperature value from the input request"
     },
-    "llm.top_p": {
+    "gen_ai.request.top_p": {
       "type": "number",
-      "format": "float"
+      "format": "float",
+      "description": "Top P value from the input request"
     },
-    "llm.top_k": {
+    "gen_ai.request.top_k": {
       "type": "number",
-      "format": "float"
+      "format": "float",
+      "description": "Top K results to return from the input request"
     },
-    "llm.user": {
-      "type": "string"
+    "gen_ai.user": {
+      "type": "string",
+      "description": "User ID from the input request"
     },
-    "llm.system.fingerprint": {
-      "type": "string"
+    "gen_ai.prompt": {
+      "type": "string",
+      "description": "Prompt text from the input request"
     },
-    "llm.prompts": {
-      "type": "string"
+    "gen_ai.completion": {
+      "type": "string",
+      "description": "Completion text from the response. This will be an array of json objects with the following format {\"role\": \"\", \"content\": \"\"}. Role can be one of the following values: [system, user, assistant, tool]"
     },
-    "llm.responses": {
-      "type": "string"
+    "gen_ai.request.stream": {
+      "type": "boolean",
+      "description": "Stream flag from the input request"
     },
-    "llm.token.counts": {
-      "type": "string"
+    "gen_ai.request.encoding_formats": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Encoding formats from the input request. Allowed values: ['float', 'int8','uint8', 'binary', 'ubinary', 'base64']"
     },
-    "llm.stream": {
-      "type": "boolean"
+    "gen_ai.request.dimensions": {
+      "type": "number",
+      "description": "Dimensions from the input request"
     },
-    "llm.encoding.formats": {
-      "type": "string"
+    "gen_ai.response_id": {
+      "type": "string",
+      "description": "Response ID from the output response"
     },
-    "llm.dimensions": {
-      "type": "string"
+    "gen_ai.response.finish_reasons": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Array of reasons the model stopped generating tokens, corresponding to each generation received"
     },
-    "llm.generation_id": {
-      "type": "string"
+    "gen_ai.system_fingerprint": {
+      "type": "string",
+      "description": "System fingerprint of the system that generated the response"
     },
-    "llm.response_id": {
-      "type": "string"
+    "gen_ai.request.documents": {
+      "type": "string",
+      "description": "Array of documents from the input request json stringified"
     },
-    "llm.citations": {
-      "type": "string"
+    "gen_ai.request.is_search_required": {
+      "type": "boolean",
+      "description": "Search flag from the input request"
     },
-    "llm.documents": {
-      "type": "string"
+    "gen_ai.response.tool_calls": {
+      "type": "string",
+      "description": "Array of tool calls from the response json stringified"
     },
-    "llm.is_search_required": {
-      "type": "boolean"
+    "gen_ai.request.max_tokens": {
+      "type": "number",
+      "description": "The maximum number of tokens the LLM generates for a request."
     },
-    "llm.search_results": {
-      "type": "string"
+    "gen_ai.usage.prompt_tokens": {
+      "type": "number",
+      "description": "The number of tokens used in the llm prompt."
     },
-    "llm.tool_calls": {
-      "type": "string"
+    "gen_ai.usage.completion_tokens": {
+      "type": "number",
+      "description": "The number of tokens in the llm response."
     },
-    "llm.max_tokens": {
-      "type": "string"
+    "gen_ai.request.seed": {
+      "type": "string",
+      "description": "Seed from the input request"
     },
-    "llm.max_input_tokens": {
-      "type": "string"
+    "gen_ai.request.frequency_penalty": {
+      "type": "number",
+      "description": "Frequency penalty from the input request"
     },
-    "llm.conversation_id": {
-      "type": "string"
+    "gen_ai.request.presence_penalty": {
+      "type": "number",
+      "description": "Presence penalty from the input request"
     },
-    "llm.seed": {
-      "type": "string"
+    "gen_ai.request.connectors": {
+      "type": "string",
+      "description": "An array of connectors from the input request json stringified"
     },
-    "llm.frequency_penalty": {
-      "type": "string"
+    "gen_ai.request.tools": {
+      "type": "string",
+      "description": "An array of tools from the input request json stringified"
     },
-    "llm.presence_penalty": {
-      "type": "string"
+    "gen_ai.request.tool_results": {
+      "type": "string",
+      "description": "An array of tool results from the input request json stringified"
     },
-    "llm.connectors": {
-      "type": "string"
+    "gen_ai.request.embedding_inputs": {
+      "type": "string",
+      "description": "An array of embedding inputs from the input request json stringified"
     },
-    "llm.tools": {
-      "type": "string"
+    "gen_ai.request.embedding_dataset_id": {
+      "type": "string",
+      "description": "Embedding dataset ID from the input request"
     },
-    "llm.tool_results": {
-      "type": "string"
+    "gen_ai.request.embedding_input_type": {
+      "type": "string",
+      "description": "Embedding input type from the input request. Allowed values: [ 'search_document', 'search_query', 'classification', 'clustering']"
     },
-    "llm.embedding_inputs": {
-      "type": "string"
+    "gen_ai.request.embedding_job_name": {
+      "type": "string",
+      "description": "Embedding job name from the input request"
     },
-    "llm.embedding_dataset_id": {
-      "type": "string"
+    "gen_ai.image.size": {
+      "type": "string",
+      "description": "Image size from the input request. Allowed values: ['256x256', '512x512', '1024x1024']"
     },
-    "llm.embedding_input_type": {
-      "type": "string"
-    },
-    "llm.embedding_job_name": {
-      "type": "string"
-    },
-    "llm.retrieval.query": {
-      "type": "string"
-    },
-    "llm.retrieval.results": {
-      "type": "string"
-    },
-    "llm.image.size": {
-      "type": "string"
-    },
-    "llm.response_format": {
-      "type": "string"
+    "gen_ai.response_format": {
+      "type": "string",
+      "description": "Response format from the input request. Allowed values: ['url', 'b64_json']"
     },
     "http.max.retries": {
       "type": "integer",
@@ -144,8 +175,13 @@
       "type": "integer",
       "format": "int64"
     },
-    "langtrace.testId": {
-      "type": "string"
+    "gen_ai.cohere.rerank.query": {
+      "type": "string",
+      "description": "Query from the input request for the rerank api"
+    },
+    "gen_ai.cohere.rerank.results": {
+      "type": "string",
+      "description": "Results from the rerank api"
     }
   },
   "required": [
@@ -154,6 +190,6 @@
     "langtrace.sdk.name",
     "langtrace.version",
     "url.full",
-    "llm.api"
+    "gen_ai.api"
   ]
 }
