@@ -1,6 +1,7 @@
 import {LLMSpanAttributes as LLMSpanAttributesInternal} from "./models/llm_span_attributes";
 import {DatabaseSpanAttributes as DatabaseSpanAttributesInternal} from "./models/database_span_attributes";
 import {FrameworkSpanAttributes as FrameworkSpanAttributesInternal} from "./models/framework_span_attributes";
+import { LLMSpanAttributeNames, DatabaseSpanAttributeNames, FrameworkSpanAttributeNames } from "./constants";
 /** Opentelemetry span attributes */
 
 /**
@@ -21,11 +22,8 @@ export declare type AttributeValue = string | number | boolean | Array<null | un
 export type LLMSpanAttributes = Attributes & ( LLMSpanAttributesInternal);
 export type DatabaseSpanAttributes = Attributes & ( DatabaseSpanAttributesInternal);
 export type FrameworkSpanAttributes = Attributes & ( FrameworkSpanAttributesInternal);
-
 export {
-  ChromaDBMethods,
-  Event,
-  OpenAIMethods,
-  PineconeMethods,
-  QdrantDBMethods
-} from "./types";
+  LLMSpanAttributeNames,
+  DatabaseSpanAttributeNames,
+  FrameworkSpanAttributeNames
+}
