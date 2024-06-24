@@ -120,6 +120,15 @@
     },
     "dspy.evaluate.result": {
       "type": "string"
+    },
+    "crewai.crew.config": {
+      "type": "string"
+    },
+    "crewai.agent.config": {
+      "type": "string"
+    },
+    "crewai.task.config": {
+      "type": "string"
     }
   },
   "required": [
