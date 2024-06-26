@@ -49,7 +49,7 @@ class SpanAttributes(Enum):
     LLM_REQUEST_REPETITION_PENALTY = "gen_ai.request.repetition_penalty"
     LLM_RESPONSE_FINISH_REASON = "gen_ai.response.finish_reasons"
     LLM_RESPONSE_STOP_REASON = "gen_ai.response.stop_reason"
-    LLM_CONTENT_COMPLETION_CHUNK = "gen_ai.content.completion.chunk"
+    LLM_CONTENT_COMPLETION_CHUNK = "gen_ai.completion.chunk"
     
     # embeddings
     LLM_REQUEST_EMBEDDING_INPUTS = "gen_ai.request.embedding_inputs"
