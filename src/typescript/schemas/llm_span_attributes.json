@@ -40,8 +40,11 @@
     },
     "gen_ai.request.temperature": {
       "type": "number",
-      "format": "float",
       "description": "Temperature value from the input request"
+    },
+    "gen_ai.request.top_logprobs": {
+      "type": "number",
+      "description": "Top log probs value from the input request"
     },
     "gen_ai.request.top_p": {
       "type": "number",
@@ -190,6 +193,6 @@
     "langtrace.sdk.name",
     "langtrace.version",
     "url.full",
-    "gen_ai.api"
+    "url.path"
   ]
 }

@@ -27,7 +27,7 @@ export interface LLMSpanAttributes {
   /**
    * Path of the request
    */
-  "url.path"?: string;
+  "url.path": string;
   /**
    * Model name from the input request
    */
@@ -40,6 +40,10 @@ export interface LLMSpanAttributes {
    * Temperature value from the input request
    */
   "gen_ai.request.temperature"?: number;
+  /**
+   * Top log probs value from the input request
+   */
+  "gen_ai.request.top_logprobs"?: number;
   /**
    * Top P value from the input request
    */

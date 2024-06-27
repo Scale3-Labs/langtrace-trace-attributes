@@ -4,9 +4,6 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
-    "gen_ai.api": {
-      "type": "string"
-    },
     "langtrace.service.name": {
       "type": "string",
       "description": "Name of the service. Includes all supported service providers by langtrace"
@@ -43,8 +40,11 @@
     },
     "gen_ai.request.temperature": {
       "type": "number",
-      "format": "float",
       "description": "Temperature value from the input request"
+    },
+    "gen_ai.request.top_logprobs": {
+      "type": "number",
+      "description": "Top log probs value from the input request"
     },
     "gen_ai.request.top_p": {
       "type": "number",
@@ -106,9 +106,6 @@
       "type": "boolean",
       "description": "Search flag from the input request"
     },
-    "gen_ai.request.tool_choice": {
-      "type": "string"
-    },
     "gen_ai.response.tool_calls": {
       "type": "string",
       "description": "Array of tool calls from the response json stringified"
@@ -149,16 +146,6 @@
       "type": "string",
       "description": "An array of tool results from the input request json stringified"
     },
-    "gen_ai.request.logit_bias": {
-      "type": "string",
-      "description": "Logit bias from the input request"
-    },
-    "gen_ai.request.logprobs": {
-      "type": "boolean"
-    },
-    "gen_ai.request.top_logprobs": {
-			"type": "number"
-		},
     "gen_ai.request.embedding_inputs": {
       "type": "string",
       "description": "An array of embedding inputs from the input request json stringified"
@@ -206,6 +193,6 @@
     "langtrace.sdk.name",
     "langtrace.version",
     "url.full",
-    "gen_ai.api"
+    "url.path"
   ]
 }
