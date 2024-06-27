@@ -43,10 +43,18 @@
       "format": "float",
       "description": "Temperature value from the input request"
     },
+    "gen_ai.request.logit_bias": {
+      "type": "string",
+      "description": "Likelihood bias of the specified tokens the input request."
+    },
+    "gen_ai.request.logprobs": {
+      "type": "boolean",
+      "description": "Logprobs flag returns log probabilities."
+    },
     "gen_ai.request.top_logprobs": {
       "type": "number",
       "format": "float",
-      "description": "Top log probs value from the input request"
+      "description": "Integer between 0 and 5 specifying the number of most likely tokens to return."
     },
     "gen_ai.request.top_p": {
       "type": "number",
@@ -108,6 +116,10 @@
     "gen_ai.request.is_search_required": {
       "type": "boolean",
       "description": "Search flag from the input request"
+    },
+    "gen_ai.request.tool_choice": {
+      "type": "string",
+      "description": "Tool choice from the input request"
     },
     "gen_ai.response.tool_calls": {
       "type": "string",
