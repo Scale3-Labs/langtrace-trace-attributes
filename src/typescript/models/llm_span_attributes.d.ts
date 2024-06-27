@@ -113,6 +113,10 @@ export interface LLMSpanAttributes {
    */
   "gen_ai.usage.completion_tokens"?: number;
   /**
+   * The number of search units used in the request.
+   */
+  "gen_ai.usage.search_units"?: number;
+  /**
    * Seed from the input request
    */
   "gen_ai.request.seed"?: string;
@@ -159,7 +163,7 @@ export interface LLMSpanAttributes {
   /**
    * Response format from the input request. Allowed values: ['url', 'b64_json']
    */
-  "gen_ai.response_format"?: string;
+  "gen_ai.request.response_format"?: string;
   "http.max.retries"?: number;
   "http.timeout"?: number;
   /**
