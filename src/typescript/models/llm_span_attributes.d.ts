@@ -113,6 +113,10 @@ export interface LLMSpanAttributes {
    */
   "gen_ai.usage.completion_tokens"?: number;
   /**
+   * The number of search units used in the request.
+   */
+  "gen_ai.usage.search_units"?: number;
+  /**
    * Seed from the input request
    */
   "gen_ai.request.seed"?: string;

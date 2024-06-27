@@ -122,6 +122,10 @@
       "type": "number",
       "description": "The number of tokens in the llm response."
     },
+    "gen_ai.usage.search_units": {
+      "type": "number",
+      "description": "The number of search units used in the request."
+    },
     "gen_ai.request.seed": {
       "type": "string",
       "description": "Seed from the input request"
