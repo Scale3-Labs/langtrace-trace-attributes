@@ -41,7 +41,15 @@ export interface LLMSpanAttributes {
    */
   "gen_ai.request.temperature"?: number;
   /**
-   * Top log probs value from the input request
+   * Likelihood bias of the specified tokens the input request.
+   */
+  "gen_ai.request.logit_bias"?: string;
+  /**
+   * Logprobs flag returns log probabilities.
+   */
+  "gen_ai.request.logprobs"?: boolean;
+  /**
+   * Integer between 0 and 5 specifying the number of most likely tokens to return.
    */
   "gen_ai.request.top_logprobs"?: number;
   /**
@@ -96,6 +104,10 @@ export interface LLMSpanAttributes {
    * Search flag from the input request
    */
   "gen_ai.request.is_search_required"?: boolean;
+  /**
+   * Tool choice from the input request
+   */
+  "gen_ai.request.tool_choice"?: string;
   /**
    * Array of tool calls from the response json stringified
    */
