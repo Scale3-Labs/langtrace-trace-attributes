@@ -163,7 +163,7 @@ export interface LLMSpanAttributes {
   /**
    * Response format from the input request. Allowed values: ['url', 'b64_json']
    */
-  "gen_ai.response_format"?: string;
+  "gen_ai.request.response_format"?: string;
   "http.max.retries"?: number;
   "http.timeout"?: number;
   /**

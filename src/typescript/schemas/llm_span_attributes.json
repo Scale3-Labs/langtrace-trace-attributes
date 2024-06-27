@@ -40,10 +40,12 @@
     },
     "gen_ai.request.temperature": {
       "type": "number",
+      "format": "float",
       "description": "Temperature value from the input request"
     },
     "gen_ai.request.top_logprobs": {
       "type": "number",
+      "format": "float",
       "description": "Top log probs value from the input request"
     },
     "gen_ai.request.top_p": {
@@ -81,6 +83,7 @@
     },
     "gen_ai.request.dimensions": {
       "type": "number",
+      "format": "int32",
       "description": "Dimensions from the input request"
     },
     "gen_ai.response_id": {
@@ -112,18 +115,22 @@
     },
     "gen_ai.request.max_tokens": {
       "type": "number",
+      "format": "int32",
       "description": "The maximum number of tokens the LLM generates for a request."
     },
     "gen_ai.usage.prompt_tokens": {
       "type": "number",
+      "format": "int32",
       "description": "The number of tokens used in the llm prompt."
     },
     "gen_ai.usage.completion_tokens": {
       "type": "number",
+      "format": "int32",
       "description": "The number of tokens in the llm response."
     },
     "gen_ai.usage.search_units": {
       "type": "number",
+      "format": "int32",
       "description": "The number of search units used in the request."
     },
     "gen_ai.request.seed": {
@@ -132,10 +139,12 @@
     },
     "gen_ai.request.frequency_penalty": {
       "type": "number",
+      "format": "float",
       "description": "Frequency penalty from the input request"
     },
     "gen_ai.request.presence_penalty": {
       "type": "number",
+      "format": "float",
       "description": "Presence penalty from the input request"
     },
     "gen_ai.request.connectors": {
@@ -170,7 +179,7 @@
       "type": "string",
       "description": "Image size from the input request. Allowed values: ['256x256', '512x512', '1024x1024']"
     },
-    "gen_ai.response_format": {
+    "gen_ai.request.response_format": {
       "type": "string",
       "description": "Response format from the input request. Allowed values: ['url', 'b64_json']"
     },
