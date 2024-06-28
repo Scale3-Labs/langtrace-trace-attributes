@@ -45,4 +45,7 @@ export interface FrameworkSpanAttributes {
   "dspy.evaluate.max_errors"?: string;
   "dspy.evaluate.args"?: string;
   "dspy.evaluate.result"?: string;
+  "crewai.crew.config"?: string;
+  "crewai.agent.config"?: string;
+  "crewai.task.config"?: string;
 }

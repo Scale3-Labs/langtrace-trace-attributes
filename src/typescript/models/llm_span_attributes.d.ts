@@ -27,7 +27,7 @@ export interface LLMSpanAttributes {
   /**
    * Path of the request
    */
-  "url.path"?: string;
+  "url.path": string;
   /**
    * Model name from the input request
    */
@@ -40,6 +40,18 @@ export interface LLMSpanAttributes {
    * Temperature value from the input request
    */
   "gen_ai.request.temperature"?: number;
+  /**
+   * Likelihood bias of the specified tokens the input request.
+   */
+  "gen_ai.request.logit_bias"?: string;
+  /**
+   * Logprobs flag returns log probabilities.
+   */
+  "gen_ai.request.logprobs"?: boolean;
+  /**
+   * Integer between 0 and 5 specifying the number of most likely tokens to return.
+   */
+  "gen_ai.request.top_logprobs"?: number;
   /**
    * Top P value from the input request
    */
@@ -93,6 +105,10 @@ export interface LLMSpanAttributes {
    */
   "gen_ai.request.is_search_required"?: boolean;
   /**
+   * Tool choice from the input request
+   */
+  "gen_ai.request.tool_choice"?: string;
+  /**
    * Array of tool calls from the response json stringified
    */
   "gen_ai.response.tool_calls"?: string;
@@ -108,6 +124,10 @@ export interface LLMSpanAttributes {
    * The number of tokens in the llm response.
    */
   "gen_ai.usage.completion_tokens"?: number;
+  /**
+   * The number of search units used in the request.
+   */
+  "gen_ai.usage.search_units"?: number;
   /**
    * Seed from the input request
    */
@@ -155,7 +175,7 @@ export interface LLMSpanAttributes {
   /**
    * Response format from the input request. Allowed values: ['url', 'b64_json']
    */
-  "gen_ai.response_format"?: string;
+  "gen_ai.request.response_format"?: string;
   "http.max.retries"?: number;
   "http.timeout"?: number;
   /**
