@@ -23,6 +23,8 @@ class SpanAttributes(Enum):
     LLM_USAGE_PROMPT_TOKENS = "gen_ai.usage.prompt_tokens"
     LLM_USAGE_TOTAL_TOKENS = "gen_ai.request.max_tokens"
     LLM_USAGE_TOKEN_TYPE = "gen_ai.usage.token_type"
+    LLM_USAGE_SEARCH_UNITS = "gen_ai.usage.search_units"
+    LLM_GENERATION_ID = "gen_ai.generation_id"
     LLM_TOKEN_TYPE = "gen_ai.token.type"
     LLM_RESPONSE_ID = "gen_ai.response_id"
     LLM_URL = "url.full"
