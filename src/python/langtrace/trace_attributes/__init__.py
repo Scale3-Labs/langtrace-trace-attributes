@@ -6,7 +6,7 @@ from .models.framework_span_attributes import FrameworkSpanAttributes
 from .models.llm_span_attributes import LLMSpanAttributes
 
 
-class SpanAttributes(Enum):
+class SpanAttributes:
     LLM_SYSTEM = "gen_ai.system"
     LLM_REQUEST_MODEL = "gen_ai.request.model"
     LLM_REQUEST_MAX_TOKENS = "gen_ai.request.max_tokens"
