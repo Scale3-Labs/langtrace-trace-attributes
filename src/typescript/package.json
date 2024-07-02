@@ -6,7 +6,7 @@
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsc -p tsconfig.build.json && ncp models dist/models",
-        "prepublishOnly": "npm run build"
+        "publish": "npm publish --access public"
     },
     "files": [
         "dist/**/*"
@@ -15,9 +15,7 @@
     "license": "MIT",
     "dependencies": {
         "ncp": "^2.0.0",
-        "tiktoken": "^1.0.15"
-    },
-    "devDependencies": {
-        "typescript": "^4.0.0"
+        "tiktoken": "^1.0.15",
+        "typescript": "^5.5.3"
     }
 }

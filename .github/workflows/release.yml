@@ -45,17 +45,16 @@ jobs:
           node-version: 20
           registry-url: "https://registry.npmjs.org"
           cache: 'npm'
+      - name: Change directory to typescript package
+        run: cd src/typescript
 
       - name: Install Node.js dependencies
         run: npm ci
-        
-      - name: Install ncp
-        run: npm install ncp
 
       - name: Configure npm for publish
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
 
       - name: Release package
-        run: npm run build:ts && npm run publish:ts
+        run: npm run build && npm run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
