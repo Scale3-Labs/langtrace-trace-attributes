@@ -1,6 +1,6 @@
 {
     "name": "@langtrase/trace-attributes",
-    "version": "6.0.0",
+    "version": "6.0.1",
     "description": "LangTrace - Trace Attributes",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
@@ -14,7 +14,8 @@
     "author": "Karthik Kalyanaraman",
     "license": "MIT",
     "dependencies": {
-        "ncp": "^2.0.0"
+        "ncp": "^2.0.0",
+        "tiktoken": "^1.0.15"
     },
     "devDependencies": {
         "typescript": "^4.0.0"
