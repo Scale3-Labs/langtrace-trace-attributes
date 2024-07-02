@@ -43,18 +43,20 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 20
-          registry-url: "https://registry.npmjs.org"
-          cache: 'npm'
-      - name: Change directory to typescript package
-        run: cd src/typescript
+          registry-url: https://registry.npmjs.org
+          cache: npm
+          cache-dependency-path: src/typescript/package-lock.json
 
       - name: Install Node.js dependencies
+        working-directory: src/typescript
         run: npm ci
 
       - name: Configure npm for publish
+        working-directory: src/typescript
         run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
 
       - name: Release package
+        working-directory: src/typescript
         run: npm run build && npm run publish
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
