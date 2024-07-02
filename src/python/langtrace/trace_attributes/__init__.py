@@ -34,6 +34,12 @@ class SpanAttributes:
     LLM_REQUEST_ENCODING_FORMATS = "gen_ai.request.encoding_formats"
     LLM_REQUEST_DIMENSIONS = "gen_ai.request.dimensions"
     LLM_REQUEST_SEED = "gen_ai.request.seed"
+    LLM_REQUEST_TOP_LOGPROPS = "gen_ai.request.top_props"
+    LLM_REQUEST_LOGPROPS = "gen_ai.request.log_props"
+    LLM_REQUEST_LOGITBIAS = "gen_ai.request.logit_bias"
+
+
+
 
     LLM_REQUEST_TYPE = "gen_ai.request.type"
     LLM_HEADERS = "gen_ai.headers"
