@@ -6,50 +6,184 @@
  */
 
 export interface LLMSpanAttributes {
+  /**
+   * Name of the service. Includes all supported service providers by langtrace
+   */
   "langtrace.service.name": string;
+  /**
+   * Type of the service. Allowed values: [llm, vectordb, framework]
+   */
   "langtrace.service.type": string;
+  /**
+   * Version of the service provider client
+   */
   "langtrace.service.version"?: string;
   "langtrace.version": string;
   "langtrace.sdk.name": string;
+  /**
+   * Full URL of the request
+   */
   "url.full": string;
-  "llm.api": string;
-  "llm.model"?: string;
-  "llm.temperature"?: number;
-  "llm.top_p"?: number;
-  "llm.top_k"?: number;
-  "llm.user"?: string;
-  "llm.system.fingerprint"?: string;
-  "llm.prompts"?: string;
-  "llm.responses"?: string;
-  "llm.token.counts"?: string;
-  "llm.stream"?: boolean;
-  "llm.encoding.formats"?: string;
-  "llm.dimensions"?: string;
-  "llm.generation_id"?: string;
-  "llm.response_id"?: string;
-  "llm.citations"?: string;
-  "llm.documents"?: string;
-  "llm.is_search_required"?: boolean;
-  "llm.search_results"?: string;
-  "llm.tool_calls"?: string;
-  "llm.max_tokens"?: string;
-  "llm.max_input_tokens"?: string;
-  "llm.conversation_id"?: string;
-  "llm.seed"?: string;
-  "llm.frequency_penalty"?: string;
-  "llm.presence_penalty"?: string;
-  "llm.connectors"?: string;
-  "llm.tools"?: string;
-  "llm.tool_results"?: string;
-  "llm.embedding_inputs"?: string;
-  "llm.embedding_dataset_id"?: string;
-  "llm.embedding_input_type"?: string;
-  "llm.embedding_job_name"?: string;
-  "llm.retrieval.query"?: string;
-  "llm.retrieval.results"?: string;
-  "llm.image.size"?: string;
-  "llm.response_format"?: string;
+  /**
+   * Path of the request
+   */
+  "url.path": string;
+  /**
+   * Model name from the input request
+   */
+  "gen_ai.request.model"?: string;
+  /**
+   * Model name from the response
+   */
+  "gen_ai.response.model"?: string;
+  /**
+   * Temperature value from the input request
+   */
+  "gen_ai.request.temperature"?: number;
+  /**
+   * Likelihood bias of the specified tokens the input request.
+   */
+  "gen_ai.request.logit_bias"?: string;
+  /**
+   * Logprobs flag returns log probabilities.
+   */
+  "gen_ai.request.logprobs"?: boolean;
+  /**
+   * Integer between 0 and 5 specifying the number of most likely tokens to return.
+   */
+  "gen_ai.request.top_logprobs"?: number;
+  /**
+   * Top P value from the input request
+   */
+  "gen_ai.request.top_p"?: number;
+  /**
+   * Top K results to return from the input request
+   */
+  "gen_ai.request.top_k"?: number;
+  /**
+   * User ID from the input request
+   */
+  "gen_ai.user"?: string;
+  /**
+   * Prompt text from the input request
+   */
+  "gen_ai.prompt"?: string;
+  /**
+   * Completion text from the response. This will be an array of json objects with the following format {"role": "", "content": ""}. Role can be one of the following values: [system, user, assistant, tool]
+   */
+  "gen_ai.completion"?: string;
+  /**
+   * Stream flag from the input request
+   */
+  "gen_ai.request.stream"?: boolean;
+  /**
+   * Encoding formats from the input request. Allowed values: ['float', 'int8','uint8', 'binary', 'ubinary', 'base64']
+   */
+  "gen_ai.request.encoding_formats"?: string[];
+  /**
+   * Dimensions from the input request
+   */
+  "gen_ai.request.dimensions"?: number;
+  /**
+   * Response ID from the output response
+   */
+  "gen_ai.response_id"?: string;
+  /**
+   * Array of reasons the model stopped generating tokens, corresponding to each generation received
+   */
+  "gen_ai.response.finish_reasons"?: string[];
+  /**
+   * System fingerprint of the system that generated the response
+   */
+  "gen_ai.system_fingerprint"?: string;
+  /**
+   * Array of documents from the input request json stringified
+   */
+  "gen_ai.request.documents"?: string;
+  /**
+   * Search flag from the input request
+   */
+  "gen_ai.request.is_search_required"?: boolean;
+  /**
+   * Tool choice from the input request
+   */
+  "gen_ai.request.tool_choice"?: string;
+  /**
+   * Array of tool calls from the response json stringified
+   */
+  "gen_ai.response.tool_calls"?: string;
+  /**
+   * The maximum number of tokens the LLM generates for a request.
+   */
+  "gen_ai.request.max_tokens"?: number;
+  /**
+   * The number of tokens used in the llm prompt.
+   */
+  "gen_ai.usage.prompt_tokens"?: number;
+  /**
+   * The number of tokens in the llm response.
+   */
+  "gen_ai.usage.completion_tokens"?: number;
+  /**
+   * The number of search units used in the request.
+   */
+  "gen_ai.usage.search_units"?: number;
+  /**
+   * Seed from the input request
+   */
+  "gen_ai.request.seed"?: string;
+  /**
+   * Frequency penalty from the input request
+   */
+  "gen_ai.request.frequency_penalty"?: number;
+  /**
+   * Presence penalty from the input request
+   */
+  "gen_ai.request.presence_penalty"?: number;
+  /**
+   * An array of connectors from the input request json stringified
+   */
+  "gen_ai.request.connectors"?: string;
+  /**
+   * An array of tools from the input request json stringified
+   */
+  "gen_ai.request.tools"?: string;
+  /**
+   * An array of tool results from the input request json stringified
+   */
+  "gen_ai.request.tool_results"?: string;
+  /**
+   * An array of embedding inputs from the input request json stringified
+   */
+  "gen_ai.request.embedding_inputs"?: string;
+  /**
+   * Embedding dataset ID from the input request
+   */
+  "gen_ai.request.embedding_dataset_id"?: string;
+  /**
+   * Embedding input type from the input request. Allowed values: [ 'search_document', 'search_query', 'classification', 'clustering']
+   */
+  "gen_ai.request.embedding_input_type"?: string;
+  /**
+   * Embedding job name from the input request
+   */
+  "gen_ai.request.embedding_job_name"?: string;
+  /**
+   * Image size from the input request. Allowed values: ['256x256', '512x512', '1024x1024']
+   */
+  "gen_ai.image.size"?: string;
+  /**
+   * Response format from the input request. Allowed values: ['url', 'b64_json']
+   */
+  "gen_ai.request.response_format"?: string;
   "http.max.retries"?: number;
   "http.timeout"?: number;
-  "langtrace.testId"?: string;
+  /**
+   * Query from the input request for the rerank api
+   */
+  "gen_ai.cohere.rerank.query"?: string;
+  /**
+   * Results from the rerank api
+   */
+  "gen_ai.cohere.rerank.results"?: string;
 }
