@@ -149,6 +149,10 @@ export interface LLMSpanAttributes {
    */
   "gen_ai.request.tools"?: string;
   /**
+   * An array of tool inputs from the input request json stringified
+   */
+  "gen_ai.request.tool_inputs"?: string;
+  /**
    * An array of tool results from the input request json stringified
    */
   "gen_ai.request.tool_results"?: string;
