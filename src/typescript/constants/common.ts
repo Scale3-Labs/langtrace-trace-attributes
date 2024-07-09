@@ -12,6 +12,7 @@ import { PineConeFunctionNames, PineConeFunctions } from './pinecone'
 import { QdrantFunctionNames, QdrantFunctions } from './qdrant'
 import { WeaviateFunctionNames, WeaviateFunctions } from './weaviate'
 import { TiktokenModel, TiktokenEncoding } from 'tiktoken'
+import { OllamaFunctionNames, OllamaFunctions } from './ollama'
 
 export const LLMSpanAttributeNames: Array<keyof typeof LLMSpanAttributesObj> = Object.keys(LLMSpanAttributesObj) as Array<keyof typeof LLMSpanAttributesObj>
 export const DatabaseSpanAttributeNames: Array<keyof typeof DatabaseSpanAttributesObj> = Object.keys(DatabaseSpanAttributesObj) as Array<keyof typeof DatabaseSpanAttributesObj>
@@ -28,7 +29,8 @@ export const Vendors = {
   CHROMADB: 'chromadb',
   QDRANT: 'qdrant',
   WEAVIATE: 'weaviate',
-  PG: 'pg'
+  PG: 'pg',
+  OLLAMA: 'ollama'
 } as const
 
 export enum Event {
@@ -36,6 +38,8 @@ export enum Event {
   STREAM_OUTPUT = 'stream.output',
   STREAM_END = 'stream.end',
   RESPONSE = 'response',
+  GEN_AI_COMPLETION = 'gen_ai.content.completion',
+  GEN_AI_PROMPT = 'gen_ai.content.prompt',
 }
 export type Vendor = typeof Vendors[keyof typeof Vendors]
 
@@ -49,7 +53,8 @@ interface VendorInstrumentationFunctions {
   chromadb: ChromadbFunctions[]
   qdrant: QdrantFunctions[]
   weaviate: WeaviateFunctions[]
-  pg: PgFunctions[]
+  pg: PgFunctions[],
+  ollama: OllamaFunctions[]
 }
 
 
@@ -68,7 +73,8 @@ export const TracedFunctionsByVendor: VendorTracedFunctions = {
   openai: OpenAIFunctionNames,
   pinecone: PineConeFunctionNames,
   qdrant: QdrantFunctionNames,
-  weaviate: WeaviateFunctionNames
+  weaviate: WeaviateFunctionNames,
+  ollama: OllamaFunctionNames
 } as const
 
 export const TIKTOKEN_MODEL_MAPPING: Record<TiktokenModel | string, TiktokenEncoding> = {
