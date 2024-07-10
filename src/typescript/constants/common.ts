@@ -13,6 +13,7 @@ import { QdrantFunctionNames, QdrantFunctions } from './qdrant'
 import { WeaviateFunctionNames, WeaviateFunctions } from './weaviate'
 import { TiktokenModel, TiktokenEncoding } from 'tiktoken'
 import { OllamaFunctionNames, OllamaFunctions } from './ollama'
+import { VercelAIFunctionNames, VercelAIFunctions } from './ai'
 
 export const LLMSpanAttributeNames: Array<keyof typeof LLMSpanAttributesObj> = Object.keys(LLMSpanAttributesObj) as Array<keyof typeof LLMSpanAttributesObj>
 export const DatabaseSpanAttributeNames: Array<keyof typeof DatabaseSpanAttributesObj> = Object.keys(DatabaseSpanAttributesObj) as Array<keyof typeof DatabaseSpanAttributesObj>
@@ -30,6 +31,7 @@ export const Vendors = {
   QDRANT: 'qdrant',
   WEAVIATE: 'weaviate',
   PG: 'pg',
+  VERCEL: 'ai',
   OLLAMA: 'ollama'
 } as const
 
@@ -54,6 +56,7 @@ interface VendorInstrumentationFunctions {
   qdrant: QdrantFunctions[]
   weaviate: WeaviateFunctions[]
   pg: PgFunctions[],
+  ai: VercelAIFunctions[],
   ollama: OllamaFunctions[]
 }
 
@@ -74,6 +77,7 @@ export const TracedFunctionsByVendor: VendorTracedFunctions = {
   pinecone: PineConeFunctionNames,
   qdrant: QdrantFunctionNames,
   weaviate: WeaviateFunctionNames,
+  ai: VercelAIFunctionNames,
   ollama: OllamaFunctionNames
 } as const
 
