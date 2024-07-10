@@ -17,11 +17,14 @@ class SpanAttributes:
     LLM_REQUEST_DOCUMENTS = "gen_ai.request.documents"
     LLM_REQUEST_SEARCH_REQUIRED = "gen_ai.request.is_search_required"
     LLM_PROMPTS = "gen_ai.prompt"
+    LLM_CONTENT_PROMPT = "gen_ai.content.prompt"
     LLM_COMPLETIONS = "gen_ai.completion"
+    LLM_CONTENT_COMPLETION = "gen_ai.content.completion"
+
     LLM_RESPONSE_MODEL = "gen_ai.response.model"
     LLM_USAGE_COMPLETION_TOKENS = "gen_ai.usage.completion_tokens"
     LLM_USAGE_PROMPT_TOKENS = "gen_ai.usage.prompt_tokens"
-    LLM_USAGE_TOTAL_TOKENS = "gen_ai.request.max_tokens"
+    LLM_USAGE_TOTAL_TOKENS = "gen_ai.request.total_tokens"
     LLM_USAGE_TOKEN_TYPE = "gen_ai.usage.token_type"
     LLM_USAGE_SEARCH_UNITS = "gen_ai.usage.search_units"
     LLM_GENERATION_ID = "gen_ai.generation_id"
@@ -37,9 +40,6 @@ class SpanAttributes:
     LLM_REQUEST_TOP_LOGPROPS = "gen_ai.request.top_props"
     LLM_REQUEST_LOGPROPS = "gen_ai.request.log_props"
     LLM_REQUEST_LOGITBIAS = "gen_ai.request.logit_bias"
-
-
-
 
     LLM_REQUEST_TYPE = "gen_ai.request.type"
     LLM_HEADERS = "gen_ai.headers"
@@ -58,10 +58,9 @@ class SpanAttributes:
     LLM_RESPONSE_FINISH_REASON = "gen_ai.response.finish_reasons"
     LLM_RESPONSE_STOP_REASON = "gen_ai.response.stop_reason"
     LLM_CONTENT_COMPLETION_CHUNK = "gen_ai.completion.chunk"
-    
     # embeddings
     LLM_REQUEST_EMBEDDING_INPUTS = "gen_ai.request.embedding_inputs"
-    LLM_REQUEST_EMBEDDING_DATASET_ID ="gen_ai_request_embedding_dataset_id"
+    LLM_REQUEST_EMBEDDING_DATASET_ID = "gen_ai_request_embedding_dataset_id"
     LLM_REQUEST_EMBEDDING_INPUT_TYPE = "gen_ai.request.embedding_input_type"
     LLM_REQUEST_EMBEDDING_JOB_NAME = "gen_ai.request.embedding_job_name"
 
