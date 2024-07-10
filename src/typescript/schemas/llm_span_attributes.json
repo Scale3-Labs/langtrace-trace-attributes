@@ -135,6 +135,11 @@
       "format": "int32",
       "description": "The number of tokens used in the llm prompt."
     },
+    "gen_ai.usage.total_tokens": {
+      "type": "number",
+      "format": "int32",
+      "description": "The total number of tokens used in the llm request."
+    },
     "gen_ai.usage.completion_tokens": {
       "type": "number",
       "format": "int32",

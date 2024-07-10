@@ -121,6 +121,10 @@ export interface LLMSpanAttributes {
    */
   "gen_ai.usage.prompt_tokens"?: number;
   /**
+   * The total number of tokens used in the llm request.
+   */
+  "gen_ai.usage.total_tokens"?: number;
+  /**
    * The number of tokens in the llm response.
    */
   "gen_ai.usage.completion_tokens"?: number;
@@ -148,10 +152,6 @@ export interface LLMSpanAttributes {
    * An array of tools from the input request json stringified
    */
   "gen_ai.request.tools"?: string;
-  /**
-   * An array of tool inputs from the input request json stringified
-   */
-  "gen_ai.request.tool_inputs"?: string;
   /**
    * An array of tool results from the input request json stringified
    */
