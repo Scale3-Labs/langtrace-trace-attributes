@@ -41,6 +41,7 @@ export enum Event {
   STREAM_END = 'stream.end',
   RESPONSE = 'response',
   GEN_AI_COMPLETION = 'gen_ai.content.completion',
+  GEN_AI_COMPLETION_CHUNK = 'gen_ai.completion.chunk',
   GEN_AI_PROMPT = 'gen_ai.content.prompt',
 }
 export type Vendor = typeof Vendors[keyof typeof Vendors]

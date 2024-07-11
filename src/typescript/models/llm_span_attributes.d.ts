@@ -81,6 +81,10 @@ export interface LLMSpanAttributes {
    */
   "gen_ai.request.encoding_formats"?: string[];
   /**
+   * Chunk text from the response
+   */
+  "gen_ai.completion.chunk"?: string;
+  /**
    * Dimensions from the input request
    */
   "gen_ai.request.dimensions"?: number;
