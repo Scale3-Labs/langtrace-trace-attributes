@@ -89,6 +89,10 @@
       },
       "description": "Encoding formats from the input request. Allowed values: ['float', 'int8','uint8', 'binary', 'ubinary', 'base64']"
     },
+    "gen_ai.completion.chunk": {
+      "type": "string",
+      "description": "Chunk text from the response"
+    },
     "gen_ai.request.dimensions": {
       "type": "number",
       "format": "int32",
