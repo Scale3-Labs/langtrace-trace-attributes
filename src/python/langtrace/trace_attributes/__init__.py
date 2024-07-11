@@ -144,6 +144,7 @@ class WeaviateMethods(Enum):
     QUERY_NEAR_VECTOR = "weaviate.collections.queries.near_vector"
     COLLECTIONS_OPERATIONS = "weaviate.collections.collections"
 
+
 class VendorType(Enum):
     LLM = "llm"
     VECTOR_DB = "vector_db"
