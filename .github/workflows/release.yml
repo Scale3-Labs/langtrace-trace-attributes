@@ -18,7 +18,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
 
       - name: Set up Python
-        uses: actions/setup-python@v2
+        uses: actions/setup-python@v5.1.1
         with:
           python-version: '3.x'
 
@@ -31,16 +31,16 @@ jobs:
           hatch build
 
       - name: Publish Python 🐍 distributions 📦 to PyPI
-        uses: pypa/gh-action-pypi-publish@master
+        uses: pypa/gh-action-pypi-publish@v1.9.0
         with:
           password: ${{ secrets.PYPI_TOKEN }}
 
   publish-node-sdk:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4.1.7
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4.0.3
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org
