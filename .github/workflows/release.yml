@@ -1,5 +1,5 @@
 name: Build & Release
-run-name: 'Releasing'
+run-name: "Releasing"
 
 on:
   pull_request:
@@ -20,7 +20,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5.1.1
         with:
-          python-version: '3.x'
+          python-version: "3.x"
 
       - name: Install hatch
         run: |
@@ -61,7 +61,6 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-
   post-release:
     name: Post Release Actions
 
@@ -72,6 +71,11 @@ jobs:
       - publish-node-sdk
 
     steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v4.1.7
+        with:
+          ref: main
+
       - name: Slack - Success Message
         uses: DSdatsme/slack-github-action@env_support
         if: ${{ success() && needs.publish-python-sdk.result == 'success' && needs.publish-node-sdk.result == 'success' }}
