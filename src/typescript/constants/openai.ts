@@ -17,22 +17,20 @@
 export const APIS = {
   CHAT_COMPLETION: {
     METHOD: 'openai.chat.completions.create',
-    ENDPOINT: '/chat/completions',
+    ENDPOINT: '/chat/completions'
   },
   IMAGES_GENERATION: {
     METHOD: 'openai.images.generate',
-    ENDPOINT: '/images/generations',
+    ENDPOINT: '/images/generations'
   },
   IMAGES_EDIT: {
     METHOD: 'openai.images.edit',
-    ENDPOINT: '/images/edits',
+    ENDPOINT: '/images/edits'
   },
   EMBEDDINGS_CREATE: {
     METHOD: 'openai.embeddings.create',
-    ENDPOINT: '/embeddings',
-  },
-} as const;
-export type OpenAIFunctions = (typeof APIS)[keyof typeof APIS]['METHOD'];
-export const OpenAIFunctionNames: OpenAIFunctions[] = Object.values(APIS).map(
-  (api) => api.METHOD
-);
+    ENDPOINT: '/embeddings'
+  }
+} as const
+export type OpenAIFunctions = typeof APIS[keyof typeof APIS]['METHOD']
+export const OpenAIFunctionNames: OpenAIFunctions[] = Object.values(APIS).map((api) => api.METHOD)
