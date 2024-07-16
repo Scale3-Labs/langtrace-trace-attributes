@@ -16,7 +16,7 @@
 
 export const APIS = {
   CHAT_COMPLETION: {
-    METHOD: 'openai.chat.completion',
+    METHOD: 'openai.chat.completions.create',
     ENDPOINT: '/chat/completions'
   },
   IMAGES_GENERATION: {
