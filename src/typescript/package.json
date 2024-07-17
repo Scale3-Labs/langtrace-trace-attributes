@@ -1,12 +1,12 @@
 {
     "name": "@langtrase/trace-attributes",
-    "version": "5.0.3",
+    "version": "6.0.5",
     "description": "LangTrace - Trace Attributes",
     "main": "dist/index.js",
     "types": "dist/index.d.ts",
     "scripts": {
         "build": "tsc -p tsconfig.build.json && ncp models dist/models",
-        "prepublishOnly": "npm run build"
+        "publish": "npm publish --access public"
     },
     "files": [
         "dist/**/*"
@@ -14,9 +14,9 @@
     "author": "Karthik Kalyanaraman",
     "license": "MIT",
     "dependencies": {
-        "ncp": "^2.0.0"
-    },
-    "devDependencies": {
-        "typescript": "^4.0.0"
+        "json-schema-to-typescript": "^14.1.0",
+        "ncp": "^2.0.0",
+        "tiktoken": "^1.0.15",
+        "typescript": "^5.5.3"
     }
 }
