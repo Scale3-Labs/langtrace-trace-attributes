@@ -17,6 +17,15 @@
 export const APIS = {
   GENERATE_TEXT: {
     METHOD: 'ai.generateText',
+  },
+  STREAM_TEXT: {
+    METHOD: 'ai.streamText',
+  },
+  EMBED: {
+    METHOD: 'ai.embed',
+  },
+  EMBED_MANY: {
+    METHOD: 'ai.embedMany',
   }
 } as const
 export type VercelAIFunctions = typeof APIS[keyof typeof APIS]['METHOD']
