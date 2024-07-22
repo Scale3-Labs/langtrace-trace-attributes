@@ -46,6 +46,7 @@ class SpanAttributes:
 
     LLM_USER = "gen_ai.user"
     LLM_TOOLS = "gen_ai.request.tools"
+    LLM_TOOL_CHOICE = "gen_ai.request.tool_choice"
     LLM_TOOL_RESULTS = "gen_ai.request.tool_results"
 
     LLM_TOP_K = "gen_ai.request.top_k"
