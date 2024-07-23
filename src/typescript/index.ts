@@ -11,6 +11,7 @@ import { APIS as LlamaIndexAPIS } from "./constants/llamaindex";
 import { APIS as OpenAIAPIs } from "./constants/openai";
 import { APIS as PineConeAPIS } from "./constants/pinecone";
 import { APIS as QdrantAPIS } from "./constants/qdrant";
+import { APIS as vercelAIAPIS } from "./constants/ai";
 import { APIS as ollamaAPIS } from "./constants/ollama";
 import { queryTypeToFunctionToProps } from "./constants/weaviate";
 import { TIKTOKEN_MODEL_MAPPING } from "./constants/common";
@@ -46,6 +47,7 @@ const APIS = {
   openai: OpenAIAPIs,
   pinecone: PineConeAPIS,
   qdrant: QdrantAPIS,
+  ai: vercelAIAPIS,
   ollama: ollamaAPIS
 }
 export {
