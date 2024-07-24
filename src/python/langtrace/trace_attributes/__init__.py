@@ -8,6 +8,7 @@ from .models.llm_span_attributes import LLMSpanAttributes
 
 class SpanAttributes:
     LLM_SYSTEM = "gen_ai.system"
+    LLM_OPERATION_NAME = "gen_ai.operation.name"
     LLM_REQUEST_MODEL = "gen_ai.request.model"
     LLM_REQUEST_MAX_TOKENS = "gen_ai.request.max_tokens"
     LLM_REQUEST_TEMPERATURE = "gen_ai.request.temperature"
@@ -22,8 +23,8 @@ class SpanAttributes:
     LLM_CONTENT_COMPLETION = "gen_ai.content.completion"
 
     LLM_RESPONSE_MODEL = "gen_ai.response.model"
-    LLM_USAGE_COMPLETION_TOKENS = "gen_ai.usage.completion_tokens"
-    LLM_USAGE_PROMPT_TOKENS = "gen_ai.usage.prompt_tokens"
+    LLM_USAGE_COMPLETION_TOKENS = "gen_ai.usage.output_tokens"
+    LLM_USAGE_PROMPT_TOKENS = "gen_ai.usage.input_tokens"
     LLM_USAGE_TOTAL_TOKENS = "gen_ai.request.total_tokens"
     LLM_USAGE_TOKEN_TYPE = "gen_ai.usage.token_type"
     LLM_USAGE_SEARCH_UNITS = "gen_ai.usage.search_units"
