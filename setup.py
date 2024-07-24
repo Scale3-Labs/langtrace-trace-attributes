@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 
 setup(
     name="trace-attributes",  # Choose a unique name for PyPI
-    version="6.0.3",
+    version="6.0.4",
     author="Karthik Kalyanaraman",
     author_email="karthik@scale3labs.com",
     description="LangTrace - Trace Attributes",
