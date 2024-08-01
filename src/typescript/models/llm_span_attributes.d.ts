@@ -7,6 +7,10 @@
 
 export interface LLMSpanAttributes {
   /**
+   * Name of the span
+   */
+  "langtrace.span.name"?: string;
+  /**
    * Name of the service. Includes all supported service providers by langtrace
    */
   "langtrace.service.name": string;
@@ -31,7 +35,7 @@ export interface LLMSpanAttributes {
   /**
    * The name of the operation being performed.
    */
-  "gen_ai.operation.name": string;
+  ""?: string;
   /**
    * Model name from the input request
    */

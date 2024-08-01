@@ -4,6 +4,10 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "langtrace.span.name": {
+      "type": "string",
+      "description": "Name of the span"
+    },
     "langtrace.service.name": {
       "type": "string",
       "description": "Name of the service. Includes all supported service providers by langtrace"
@@ -30,7 +34,7 @@
       "type": "string",
       "description": "Path of the request"
     },
-    "gen_ai.operation.name": {
+    "": {
       "type": "string",
       "description": "The name of the operation being performed."
     },

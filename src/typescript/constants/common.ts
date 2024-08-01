@@ -1,24 +1,27 @@
-import { properties as LLMSpanAttributesObj  } from '../schemas/llm_span_attributes.json'
-import { properties as DatabaseSpanAttributesObj } from  '../schemas/database_span_attributes.json'
-import { properties as FrameworkSpanAttributesObj } from '../schemas/framework_span_attributes.json'
-import { AnthropicFunctions, AnthropicFunctionNames } from './anthropic'
-import { PgFunctionNames, PgFunctions } from './pg'
-import { ChromadbFunctionNames, ChromadbFunctions } from './chroma'
-import { CohereFunctionNames, CohereFunctions } from './cohere'
-import { GroqFunctionNames, GroqFunctions } from './groq'
-import { LlamaIndexFunctionNames, LlamaIndexFunctions } from './llamaindex'
-import { OpenAIFunctionNames, OpenAIFunctions } from './openai'
-import { PineConeFunctionNames, PineConeFunctions } from './pinecone'
-import { QdrantFunctionNames, QdrantFunctions } from './qdrant'
-import { WeaviateFunctionNames, WeaviateFunctions } from './weaviate'
-import { TiktokenModel, TiktokenEncoding } from 'tiktoken'
-import { OllamaFunctionNames, OllamaFunctions } from './ollama'
-import { VercelAIFunctionNames, VercelAIFunctions } from './ai'
+import { properties as LLMSpanAttributesObj } from '../schemas/llm_span_attributes.json';
+import { properties as DatabaseSpanAttributesObj } from '../schemas/database_span_attributes.json';
+import { properties as FrameworkSpanAttributesObj } from '../schemas/framework_span_attributes.json';
+import { AnthropicFunctions, AnthropicFunctionNames } from './anthropic';
+import { PgFunctionNames, PgFunctions } from './pg';
+import { ChromadbFunctionNames, ChromadbFunctions } from './chroma';
+import { CohereFunctionNames, CohereFunctions } from './cohere';
+import { GroqFunctionNames, GroqFunctions } from './groq';
+import { LlamaIndexFunctionNames, LlamaIndexFunctions } from './llamaindex';
+import { OpenAIFunctionNames, OpenAIFunctions } from './openai';
+import { PineConeFunctionNames, PineConeFunctions } from './pinecone';
+import { QdrantFunctionNames, QdrantFunctions } from './qdrant';
+import { WeaviateFunctionNames, WeaviateFunctions } from './weaviate';
+import { TiktokenModel, TiktokenEncoding } from 'tiktoken';
+import { OllamaFunctionNames, OllamaFunctions } from './ollama';
+import { VercelAIFunctionNames, VercelAIFunctions } from './ai';
 
-export const LLMSpanAttributeNames: Array<keyof typeof LLMSpanAttributesObj> = Object.keys(LLMSpanAttributesObj) as Array<keyof typeof LLMSpanAttributesObj>
-export const DatabaseSpanAttributeNames: Array<keyof typeof DatabaseSpanAttributesObj> = Object.keys(DatabaseSpanAttributesObj) as Array<keyof typeof DatabaseSpanAttributesObj>
-export const FrameworkSpanAttributeNames: Array<keyof typeof FrameworkSpanAttributesObj> = Object.keys(FrameworkSpanAttributesObj) as Array<keyof typeof FrameworkSpanAttributesObj>
+function getTypedKeys<T extends object>(obj: T): Array<keyof T> {
+  return Object.keys(obj) as Array<keyof T>;
+}
 
+export const LLMSpanAttributeNames = getTypedKeys(LLMSpanAttributesObj);
+export const DatabaseSpanAttributeNames = getTypedKeys(DatabaseSpanAttributesObj);
+export const FrameworkSpanAttributeNames = getTypedKeys(FrameworkSpanAttributesObj);
 
 export const Vendors = {
   OPENAI: 'openai',
@@ -33,7 +36,7 @@ export const Vendors = {
   PG: 'pg',
   VERCEL: 'ai',
   OLLAMA: 'ollama'
-} as const
+} as const;
 
 export enum Event {
   STREAM_START = 'stream.start',
@@ -44,27 +47,25 @@ export enum Event {
   GEN_AI_COMPLETION_CHUNK = 'gen_ai.completion.chunk',
   GEN_AI_PROMPT = 'gen_ai.content.prompt',
 }
-export type Vendor = typeof Vendors[keyof typeof Vendors]
+export type Vendor = typeof Vendors[keyof typeof Vendors];
 
 interface VendorInstrumentationFunctions {
-  openai: OpenAIFunctions[]
-  cohere: CohereFunctions[]
-  anthropic: AnthropicFunctions[]
-  groq: GroqFunctions[]
-  pinecone: PineConeFunctions[]
-  llamaindex: LlamaIndexFunctions[]
-  chromadb: ChromadbFunctions[]
-  qdrant: QdrantFunctions[]
-  weaviate: WeaviateFunctions[]
-  pg: PgFunctions[],
-  ai: VercelAIFunctions[],
-  ollama: OllamaFunctions[]
+  openai: OpenAIFunctions[];
+  cohere: CohereFunctions[];
+  anthropic: AnthropicFunctions[];
+  groq: GroqFunctions[];
+  pinecone: PineConeFunctions[];
+  llamaindex: LlamaIndexFunctions[];
+  chromadb: ChromadbFunctions[];
+  qdrant: QdrantFunctions[];
+  weaviate: WeaviateFunctions[];
+  pg: PgFunctions[];
+  ai: VercelAIFunctions[];
+  ollama: OllamaFunctions[];
 }
 
-
-// DisableTracing interface that enforces keys to match InstrumentationType
 export type VendorTracedFunctions = {
-  [key in Vendor]: VendorInstrumentationFunctions[key]
+  [key in Vendor]: VendorInstrumentationFunctions[key];
 }
 
 export const TracedFunctionsByVendor: VendorTracedFunctions = {
@@ -80,7 +81,7 @@ export const TracedFunctionsByVendor: VendorTracedFunctions = {
   weaviate: WeaviateFunctionNames,
   ai: VercelAIFunctionNames,
   ollama: OllamaFunctionNames
-} as const
+} as const;
 
 export const TIKTOKEN_MODEL_MAPPING: Record<TiktokenModel | string, TiktokenEncoding> = {
   'gpt-4': 'cl100k_base',
@@ -89,5 +90,6 @@ export const TIKTOKEN_MODEL_MAPPING: Record<TiktokenModel | string, TiktokenEnco
   'gpt-4-1106-preview': 'cl100k_base',
   'gpt-4-1106-vision-preview': 'cl100k_base',
   'gpt-4o': 'o200k_base',
+  'gpt-4o-mini': 'o200k_base',
   'gpt-4o-2024-05-13': 'o200k_base'
-} as const
+} as const;
