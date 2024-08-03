@@ -25,7 +25,7 @@ class SpanAttributes:
     LLM_RESPONSE_MODEL = "gen_ai.response.model"
     LLM_USAGE_COMPLETION_TOKENS = "gen_ai.usage.output_tokens"
     LLM_USAGE_PROMPT_TOKENS = "gen_ai.usage.input_tokens"
-    LLM_USAGE_TOTAL_TOKENS = "gen_ai.request.total_tokens"
+    LLM_USAGE_TOTAL_TOKENS = "gen_ai.usage.total_tokens"
     LLM_USAGE_TOKEN_TYPE = "gen_ai.usage.token_type"
     LLM_USAGE_SEARCH_UNITS = "gen_ai.usage.search_units"
     LLM_GENERATION_ID = "gen_ai.generation_id"
