@@ -29,9 +29,13 @@ export interface LLMSpanAttributes {
    */
   "url.path": string;
   /**
+   * The name of the operation being performed.
+   */
+  "gen_ai.operation.name": string;
+  /**
    * Model name from the input request
    */
-  "gen_ai.request.model"?: string;
+  "gen_ai.request.model": string;
   /**
    * Model name from the response
    */
@@ -123,7 +127,7 @@ export interface LLMSpanAttributes {
   /**
    * The number of tokens used in the llm prompt.
    */
-  "gen_ai.usage.prompt_tokens"?: number;
+  "gen_ai.usage.input_tokens"?: number;
   /**
    * The total number of tokens used in the llm request.
    */
@@ -131,7 +135,7 @@ export interface LLMSpanAttributes {
   /**
    * The number of tokens in the llm response.
    */
-  "gen_ai.usage.completion_tokens"?: number;
+  "gen_ai.usage.output_tokens"?: number;
   /**
    * The number of search units used in the request.
    */
