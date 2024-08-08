@@ -34,7 +34,7 @@
       "type": "string",
       "description": "Path of the request"
     },
-    "": {
+    "gen_ai.operation.name": {
       "type": "string",
       "description": "The name of the operation being performed."
     },

@@ -35,7 +35,7 @@ export interface LLMSpanAttributes {
   /**
    * The name of the operation being performed.
    */
-  ""?: string;
+  "gen_ai.operation.name": string;
   /**
    * Model name from the input request
    */
