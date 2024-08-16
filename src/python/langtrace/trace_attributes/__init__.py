@@ -33,7 +33,7 @@ class SpanAttributes:
     LLM_RESPONSE_ID = "gen_ai.response_id"
     LLM_URL = "url.full"
     LLM_PATH = "url.path"
-    LLM_RESPONSE_FORMAT = "gen_ai.response.format"
+    LLM_RESPONSE_FORMAT = "gen_ai.request.response_format"
     LLM_IMAGE_SIZE = "gen_ai.image.size"
     LLM_REQUEST_ENCODING_FORMATS = "gen_ai.request.encoding_formats"
     LLM_REQUEST_DIMENSIONS = "gen_ai.request.dimensions"
