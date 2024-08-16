@@ -26,7 +26,13 @@ export const APIS = {
   },
   EMBED_MANY: {
     METHOD: 'ai.embedMany',
-  }
+  },
+  GENERATE_OBJECT: {
+    METHOD: 'ai.generateObject',
+  },
+  STREAM_OBJECT: {
+    METHOD: 'ai.streamObject',
+  },
 } as const
 export type VercelAIFunctions = typeof APIS[keyof typeof APIS]['METHOD']
 export const VercelAIFunctionNames: VercelAIFunctions[] = Object.values(APIS).map((api) => api.METHOD)
