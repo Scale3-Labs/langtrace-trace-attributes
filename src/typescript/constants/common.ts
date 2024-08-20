@@ -11,7 +11,7 @@ import { OpenAIFunctionNames, OpenAIFunctions } from './openai';
 import { PineConeFunctionNames, PineConeFunctions } from './pinecone';
 import { QdrantFunctionNames, QdrantFunctions } from './qdrant';
 import { WeaviateFunctionNames, WeaviateFunctions } from './weaviate';
-import { TiktokenModel, TiktokenEncoding } from 'tiktoken';
+import { TiktokenModel, TiktokenEncoding } from '@dqbd/tiktoken';
 import { OllamaFunctionNames, OllamaFunctions } from './ollama';
 import { VercelAIFunctionNames, VercelAIFunctions } from './ai';
 
