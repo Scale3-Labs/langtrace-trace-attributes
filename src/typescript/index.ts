@@ -6,6 +6,7 @@ import { APIS as AnthropicAPIS } from "./constants/anthropic";
 import { APIS as PgAPIS } from "./constants/pg";
 import { APIS as ChromadbAPIS } from "./constants/chroma";
 import { APIS as CohereAPIS } from "./constants/cohere";
+import { APIS as GeminiAPIS } from "./constants/gemini";
 import { APIS as GroqAPIS } from "./constants/groq";
 import { APIS as LlamaIndexAPIS } from "./constants/llamaindex";
 import { APIS as OpenAIAPIs } from "./constants/openai";
@@ -42,6 +43,7 @@ const APIS = {
   pg: PgAPIS,
   chromadb: ChromadbAPIS,
   cohere: CohereAPIS,
+  gemini: GeminiAPIS,
   groq: GroqAPIS,
   llamaindex: LlamaIndexAPIS,
   openai: OpenAIAPIs,

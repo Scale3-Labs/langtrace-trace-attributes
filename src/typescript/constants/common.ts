@@ -5,6 +5,7 @@ import { AnthropicFunctions, AnthropicFunctionNames } from './anthropic';
 import { PgFunctionNames, PgFunctions } from './pg';
 import { ChromadbFunctionNames, ChromadbFunctions } from './chroma';
 import { CohereFunctionNames, CohereFunctions } from './cohere';
+import { GeminiFunctionNames, GeminiFunctions } from './gemini';
 import { GroqFunctionNames, GroqFunctions } from './groq';
 import { LlamaIndexFunctionNames, LlamaIndexFunctions } from './llamaindex';
 import { OpenAIFunctionNames, OpenAIFunctions } from './openai';
@@ -27,6 +28,7 @@ export const Vendors = {
   OPENAI: 'openai',
   COHERE: 'cohere',
   ANTHROPIC: 'anthropic',
+  GEMINI: 'gemini',
   GROQ: 'groq',
   PINECONE: 'pinecone',
   LLAMAINDEX: 'llamaindex',
@@ -53,6 +55,7 @@ interface VendorInstrumentationFunctions {
   openai: OpenAIFunctions[];
   cohere: CohereFunctions[];
   anthropic: AnthropicFunctions[];
+  gemini: GeminiFunctions[];
   groq: GroqFunctions[];
   pinecone: PineConeFunctions[];
   llamaindex: LlamaIndexFunctions[];
@@ -73,6 +76,7 @@ export const TracedFunctionsByVendor: VendorTracedFunctions = {
   pg: PgFunctionNames,
   chromadb: ChromadbFunctionNames,
   cohere: CohereFunctionNames,
+  gemini: GeminiFunctionNames,
   groq: GroqFunctionNames,
   llamaindex: LlamaIndexFunctionNames,
   openai: OpenAIFunctionNames,
