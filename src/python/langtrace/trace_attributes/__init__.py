@@ -144,7 +144,7 @@ class WeaviateMethods(Enum):
     QUERY_NEAR_OBJECT = "weaviate.collections.queries.near_object"
     QUERY_NEAR_TEXT = "weaviate.collections.queries.near_text"
     QUERY_NEAR_VECTOR = "weaviate.collections.queries.near_vector"
-    COLLECTIONS_OPERATIONS = "weaviate.collections.collections"
+    COLLECTIONS_OPERATIONS = "weaviate.collections.collections.sync"
 
 
 class VendorType(Enum):
