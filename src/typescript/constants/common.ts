@@ -15,6 +15,7 @@ import { WeaviateFunctionNames, WeaviateFunctions } from './weaviate';
 import { TiktokenModel, TiktokenEncoding } from 'js-tiktoken';
 import { OllamaFunctionNames, OllamaFunctions } from './ollama';
 import { VercelAIFunctionNames, VercelAIFunctions } from './ai';
+import { VertexAIFunctionNames, VertexAIFunctions } from './vertexai';
 
 function getTypedKeys<T extends object>(obj: T): Array<keyof T> {
   return Object.keys(obj) as Array<keyof T>;
@@ -37,7 +38,8 @@ export const Vendors = {
   WEAVIATE: 'weaviate',
   PG: 'pg',
   VERCEL: 'ai',
-  OLLAMA: 'ollama'
+  OLLAMA: 'ollama',
+  VERTEXAI: 'vertexai',
 } as const;
 
 export enum Event {
@@ -65,6 +67,7 @@ interface VendorInstrumentationFunctions {
   pg: PgFunctions[];
   ai: VercelAIFunctions[];
   ollama: OllamaFunctions[];
+  vertexai: VertexAIFunctions[];
 }
 
 export type VendorTracedFunctions = {
@@ -84,7 +87,8 @@ export const TracedFunctionsByVendor: VendorTracedFunctions = {
   qdrant: QdrantFunctionNames,
   weaviate: WeaviateFunctionNames,
   ai: VercelAIFunctionNames,
-  ollama: OllamaFunctionNames
+  ollama: OllamaFunctionNames,
+  vertexai: VertexAIFunctionNames,
 } as const;
 
 export const TIKTOKEN_MODEL_MAPPING: Record<TiktokenModel | string, TiktokenEncoding> = {

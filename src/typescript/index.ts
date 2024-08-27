@@ -14,6 +14,7 @@ import { APIS as PineConeAPIS } from "./constants/pinecone";
 import { APIS as QdrantAPIS } from "./constants/qdrant";
 import { APIS as vercelAIAPIS } from "./constants/ai";
 import { APIS as ollamaAPIS } from "./constants/ollama";
+import { APIS as vertexAIAPIS } from "./constants/vertexai";
 import { queryTypeToFunctionToProps } from "./constants/weaviate";
 import { TIKTOKEN_MODEL_MAPPING } from "./constants/common";
 
@@ -50,7 +51,8 @@ const APIS = {
   pinecone: PineConeAPIS,
   qdrant: QdrantAPIS,
   ai: vercelAIAPIS,
-  ollama: ollamaAPIS
+  ollama: ollamaAPIS,
+  vertexai: vertexAIAPIS,
 }
 export {
   LLMSpanAttributeNames,
