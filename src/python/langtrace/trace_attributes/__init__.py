@@ -96,6 +96,14 @@ class OpenAIMethods(Enum):
     EMBEDDINGS_CREATE = "openai.embeddings.create"
 
 
+class MistralMethods(Enum):
+    CHAT_COMPLETE = "mistral.chat.complete"
+    ASYNC_CHAT_COMPLETE = "mistral.chat.async_complete"
+    CHAT_STREAM = "mistral.chat.stream"
+    EMBEDDINGS_CREATE = "mistral.embeddings.create"
+    ASYNC_EMBEDDINGS_CREATE = "mistral.embeddings.create_async"
+
+
 class ChromaDBMethods(Enum):
     ADD = "chromadb.collection.add"
     GET = "chromadb.collection.get"
@@ -164,4 +172,5 @@ __all__ = [
     "ChromaDBMethods",
     "PineconeMethods",
     "WeaviateMethods",
+    "MistralMethods",
 ]
