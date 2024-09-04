@@ -24,7 +24,7 @@ export const APIS = {
     ENDPOINT: '/v1/chat/completions'
   },
   EMBEDDINGS_CREATE: {
-    METHOD: 'openai.embeddings.create',
+    METHOD: 'mistral.embeddings.create',
     ENDPOINT: '/v1/embeddings'
   }
 } as const
