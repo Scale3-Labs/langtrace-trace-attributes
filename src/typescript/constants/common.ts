@@ -8,6 +8,7 @@ import { CohereFunctionNames, CohereFunctions } from './cohere';
 import { GeminiFunctionNames, GeminiFunctions } from './gemini';
 import { GroqFunctionNames, GroqFunctions } from './groq';
 import { LlamaIndexFunctionNames, LlamaIndexFunctions } from './llamaindex';
+import { MistralFunctionNames, MistralFunctions } from './mistral';
 import { OpenAIFunctionNames, OpenAIFunctions } from './openai';
 import { PineConeFunctionNames, PineConeFunctions } from './pinecone';
 import { QdrantFunctionNames, QdrantFunctions } from './qdrant';
@@ -30,6 +31,7 @@ export const Vendors = {
   COHERE: 'cohere',
   ANTHROPIC: 'anthropic',
   GEMINI: 'gemini',
+  MISTRAL: 'mistral',
   GROQ: 'groq',
   PINECONE: 'pinecone',
   LLAMAINDEX: 'llamaindex',
@@ -58,6 +60,7 @@ interface VendorInstrumentationFunctions {
   cohere: CohereFunctions[];
   anthropic: AnthropicFunctions[];
   gemini: GeminiFunctions[];
+  mistral: MistralFunctions[];
   groq: GroqFunctions[];
   pinecone: PineConeFunctions[];
   llamaindex: LlamaIndexFunctions[];
@@ -82,6 +85,7 @@ export const TracedFunctionsByVendor: VendorTracedFunctions = {
   gemini: GeminiFunctionNames,
   groq: GroqFunctionNames,
   llamaindex: LlamaIndexFunctionNames,
+  mistral: MistralFunctionNames,
   openai: OpenAIFunctionNames,
   pinecone: PineConeFunctionNames,
   qdrant: QdrantFunctionNames,
