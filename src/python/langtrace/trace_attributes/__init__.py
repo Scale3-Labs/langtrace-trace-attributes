@@ -154,6 +154,8 @@ class WeaviateMethods(Enum):
     QUERY_NEAR_VECTOR = "weaviate.collections.queries.near_vector"
     COLLECTIONS_OPERATIONS = "weaviate.collections.collections.sync"
 
+class PgVectorsMethods(Enum):
+    EXECUTE = "Connection.execute"
 
 class VendorType(Enum):
     LLM = "llm"
@@ -173,4 +175,5 @@ __all__ = [
     "PineconeMethods",
     "WeaviateMethods",
     "MistralMethods",
+    "PgVectorsMethods",
 ]
