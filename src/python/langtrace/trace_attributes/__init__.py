@@ -104,6 +104,11 @@ class MistralMethods(Enum):
     ASYNC_EMBEDDINGS_CREATE = "mistral.embeddings.create_async"
 
 
+class AWSBedrockMethods(Enum):
+    CONVERSE = "aws_bedrock.converse"
+    CONVERSE_STREAM = "aws_bedrock.converse_stream"
+
+
 class ChromaDBMethods(Enum):
     ADD = "chromadb.collection.add"
     GET = "chromadb.collection.get"
@@ -173,4 +178,5 @@ __all__ = [
     "PineconeMethods",
     "WeaviateMethods",
     "MistralMethods",
+    "AWSBedrockMethods",
 ]
