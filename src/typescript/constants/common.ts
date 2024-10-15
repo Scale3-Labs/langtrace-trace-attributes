@@ -9,6 +9,7 @@ import { GeminiFunctionNames, GeminiFunctions } from './gemini';
 import { GroqFunctionNames, GroqFunctions } from './groq';
 import { LlamaIndexFunctionNames, LlamaIndexFunctions } from './llamaindex';
 import { MistralFunctionNames, MistralFunctions } from './mistral';
+import { AWSBedrockFunctionNames, AWSBedrockFunctions } from './awsbedrock';
 import { OpenAIFunctionNames, OpenAIFunctions } from './openai';
 import { PineConeFunctionNames, PineConeFunctions } from './pinecone';
 import { QdrantFunctionNames, QdrantFunctions } from './qdrant';
@@ -32,6 +33,7 @@ export const Vendors = {
   ANTHROPIC: 'anthropic',
   GEMINI: 'gemini',
   MISTRAL: 'mistral',
+  AWSBEDROCK: 'awsbedrock',
   GROQ: 'groq',
   PINECONE: 'pinecone',
   LLAMAINDEX: 'llamaindex',
@@ -61,6 +63,7 @@ interface VendorInstrumentationFunctions {
   anthropic: AnthropicFunctions[];
   gemini: GeminiFunctions[];
   mistral: MistralFunctions[];
+  awsbedrock: AWSBedrockFunctions[];
   groq: GroqFunctions[];
   pinecone: PineConeFunctions[];
   llamaindex: LlamaIndexFunctions[];
@@ -86,6 +89,7 @@ export const TracedFunctionsByVendor: VendorTracedFunctions = {
   groq: GroqFunctionNames,
   llamaindex: LlamaIndexFunctionNames,
   mistral: MistralFunctionNames,
+  awsbedrock: AWSBedrockFunctionNames,
   openai: OpenAIFunctionNames,
   pinecone: PineConeFunctionNames,
   qdrant: QdrantFunctionNames,

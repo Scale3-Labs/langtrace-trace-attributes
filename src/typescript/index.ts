@@ -10,6 +10,7 @@ import { APIS as GeminiAPIS } from "./constants/gemini";
 import { APIS as GroqAPIS } from "./constants/groq";
 import { APIS as LlamaIndexAPIS } from "./constants/llamaindex";
 import { APIS as MistralAPIS } from "./constants/mistral";
+import { APIS as AWSBedrockAPIS } from "./constants/awsbedrock";
 import { APIS as OpenAIAPIs } from "./constants/openai";
 import { APIS as PineConeAPIS } from "./constants/pinecone";
 import { APIS as QdrantAPIS } from "./constants/qdrant";
@@ -49,6 +50,7 @@ const APIS = {
   groq: GroqAPIS,
   llamaindex: LlamaIndexAPIS,
   mistral: MistralAPIS,
+  awsbedrock: AWSBedrockAPIS,
   openai: OpenAIAPIs,
   pinecone: PineConeAPIS,
   qdrant: QdrantAPIS,
