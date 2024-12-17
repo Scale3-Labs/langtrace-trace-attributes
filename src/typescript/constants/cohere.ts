@@ -19,13 +19,25 @@ export const APIS = {
     METHOD: 'cohere.chat',
     ENDPOINT: '/v1/chat'
   },
+  CHATV2: {
+    METHOD: 'cohere.chat',
+    ENDPOINT: '/v2/chat'
+  },
   CHAT_STREAM: {
     METHOD: 'cohere.chatStream',
     ENDPOINT: '/v1/chat'
   },
+  CHAT_STREAM_V2: {
+    METHOD: 'cohere.chatStream',
+    ENDPOINT: '/v2/chat'
+  },
   EMBED: {
     METHOD: 'cohere.embed',
     ENDPOINT: '/v1/embed'
+  },
+  EMBEDV2: {
+    METHOD: 'cohere.embed',
+    ENDPOINT: '/v2/embed'
   },
   EMBED_JOBS: {
     METHOD: 'cohere.embedJobs.create',
@@ -34,6 +46,10 @@ export const APIS = {
   RERANK: {
     METHOD: 'cohere.rerank',
     ENDPOINT: '/v1/rerank'
+  },
+  RERANKV2: {
+    METHOD: 'cohere.rerank',
+    ENDPOINT: '/v2/rerank'
   }
 } as const
 
