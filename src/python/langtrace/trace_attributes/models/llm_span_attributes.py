@@ -165,7 +165,7 @@ class LLMSpanAttributes(BaseModel):
         alias="gen_ai.usage.search_units",
         description="The number of search units used in the request.",
     )
-    gen_ai_request_seed: Optional[str] = Field(
+    gen_ai_request_seed: Optional[str | int] = Field(
         None, alias="gen_ai.request.seed", description="Seed from the input request"
     )
     gen_ai_request_frequency_penalty: Optional[float] = Field(
