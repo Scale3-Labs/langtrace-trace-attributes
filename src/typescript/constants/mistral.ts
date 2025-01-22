@@ -15,24 +15,18 @@
  */
 
 export const APIS = {
-  GENERATE_TEXT: {
-    METHOD: 'ai.generateText',
+  CHAT_COMPLETE: {
+    METHOD: 'mistral.chat.complete',
+    ENDPOINT: '/v1/chat/completions'
   },
-  STREAM_TEXT: {
-    METHOD: 'ai.streamText',
+  CHAT_STREAM: {
+    METHOD: 'mistral.chat.stream',
+    ENDPOINT: '/v1/chat/completions'
   },
-  EMBED: {
-    METHOD: 'ai.embed',
-  },
-  EMBED_MANY: {
-    METHOD: 'ai.embedMany',
-  },
-  GENERATE_OBJECT: {
-    METHOD: 'ai.generateObject',
-  },
-  STREAM_OBJECT: {
-    METHOD: 'ai.streamObject',
-  },
+  EMBEDDINGS_CREATE: {
+    METHOD: 'mistral.embeddings.create',
+    ENDPOINT: '/v1/embeddings'
+  }
 } as const
-export type VercelAIFunctions = typeof APIS[keyof typeof APIS]['METHOD']
-export const VercelAIFunctionNames: VercelAIFunctions[] = Object.values(APIS).map((api) => api.METHOD)
+export type MistralFunctions = typeof APIS[keyof typeof APIS]['METHOD']
+export const MistralFunctionNames: MistralFunctions[] = Object.values(APIS).map((api) => api.METHOD)

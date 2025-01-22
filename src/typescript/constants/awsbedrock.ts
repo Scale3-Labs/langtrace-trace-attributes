@@ -15,24 +15,14 @@
  */
 
 export const APIS = {
-  GENERATE_TEXT: {
-    METHOD: 'ai.generateText',
+  CONVERSE: {
+    METHOD: 'awsbedrock.converse',
+    ENDPOINT: '/converse'
   },
-  STREAM_TEXT: {
-    METHOD: 'ai.streamText',
-  },
-  EMBED: {
-    METHOD: 'ai.embed',
-  },
-  EMBED_MANY: {
-    METHOD: 'ai.embedMany',
-  },
-  GENERATE_OBJECT: {
-    METHOD: 'ai.generateObject',
-  },
-  STREAM_OBJECT: {
-    METHOD: 'ai.streamObject',
-  },
+  CONVERSE_STREAM: {
+    METHOD: 'awsbedrock.converseStream',
+    ENDPOINT: '/converse-stream'
+  }
 } as const
-export type VercelAIFunctions = typeof APIS[keyof typeof APIS]['METHOD']
-export const VercelAIFunctionNames: VercelAIFunctions[] = Object.values(APIS).map((api) => api.METHOD)
+export type AWSBedrockFunctions = typeof APIS[keyof typeof APIS]['METHOD']
+export const AWSBedrockFunctionNames: AWSBedrockFunctions[] = Object.values(APIS).map((api) => api.METHOD)

@@ -25,7 +25,7 @@ class SpanAttributes:
     LLM_RESPONSE_MODEL = "gen_ai.response.model"
     LLM_USAGE_COMPLETION_TOKENS = "gen_ai.usage.output_tokens"
     LLM_USAGE_PROMPT_TOKENS = "gen_ai.usage.input_tokens"
-    LLM_USAGE_TOTAL_TOKENS = "gen_ai.request.total_tokens"
+    LLM_USAGE_TOTAL_TOKENS = "gen_ai.usage.total_tokens"
     LLM_USAGE_TOKEN_TYPE = "gen_ai.usage.token_type"
     LLM_USAGE_SEARCH_UNITS = "gen_ai.usage.search_units"
     LLM_GENERATION_ID = "gen_ai.generation_id"
@@ -33,7 +33,7 @@ class SpanAttributes:
     LLM_RESPONSE_ID = "gen_ai.response_id"
     LLM_URL = "url.full"
     LLM_PATH = "url.path"
-    LLM_RESPONSE_FORMAT = "gen_ai.response.format"
+    LLM_RESPONSE_FORMAT = "gen_ai.request.response_format"
     LLM_IMAGE_SIZE = "gen_ai.image.size"
     LLM_REQUEST_ENCODING_FORMATS = "gen_ai.request.encoding_formats"
     LLM_REQUEST_DIMENSIONS = "gen_ai.request.dimensions"
@@ -96,6 +96,19 @@ class OpenAIMethods(Enum):
     EMBEDDINGS_CREATE = "openai.embeddings.create"
 
 
+class MistralMethods(Enum):
+    CHAT_COMPLETE = "mistral.chat.complete"
+    ASYNC_CHAT_COMPLETE = "mistral.chat.async_complete"
+    CHAT_STREAM = "mistral.chat.stream"
+    EMBEDDINGS_CREATE = "mistral.embeddings.create"
+    ASYNC_EMBEDDINGS_CREATE = "mistral.embeddings.create_async"
+
+
+class AWSBedrockMethods(Enum):
+    CONVERSE = "aws_bedrock.converse"
+    CONVERSE_STREAM = "aws_bedrock.converse_stream"
+
+
 class ChromaDBMethods(Enum):
     ADD = "chromadb.collection.add"
     GET = "chromadb.collection.get"
@@ -144,7 +157,7 @@ class WeaviateMethods(Enum):
     QUERY_NEAR_OBJECT = "weaviate.collections.queries.near_object"
     QUERY_NEAR_TEXT = "weaviate.collections.queries.near_text"
     QUERY_NEAR_VECTOR = "weaviate.collections.queries.near_vector"
-    COLLECTIONS_OPERATIONS = "weaviate.collections.collections"
+    COLLECTIONS_OPERATIONS = "weaviate.collections.collections.sync"
 
 
 class VendorType(Enum):
@@ -164,4 +177,6 @@ __all__ = [
     "ChromaDBMethods",
     "PineconeMethods",
     "WeaviateMethods",
+    "MistralMethods",
+    "AWSBedrockMethods",
 ]

@@ -15,24 +15,18 @@
  */
 
 export const APIS = {
-  GENERATE_TEXT: {
-    METHOD: 'ai.generateText',
+	GENERATE_CONTENT: {
+		METHOD: "vertexAI.GenerativeModel.generateContent",
   },
-  STREAM_TEXT: {
-    METHOD: 'ai.streamText',
-  },
-  EMBED: {
-    METHOD: 'ai.embed',
-  },
-  EMBED_MANY: {
-    METHOD: 'ai.embedMany',
-  },
-  GENERATE_OBJECT: {
-    METHOD: 'ai.generateObject',
-  },
-  STREAM_OBJECT: {
-    METHOD: 'ai.streamObject',
-  },
-} as const
-export type VercelAIFunctions = typeof APIS[keyof typeof APIS]['METHOD']
-export const VercelAIFunctionNames: VercelAIFunctions[] = Object.values(APIS).map((api) => api.METHOD)
+	GENERATE_CONTENT_STREAM: {
+		METHOD: "vertexAI.GenerativeModel.generateContentStream",
+	},
+	SEND_MESSAGE: {
+		METHOD: "vertexAI.ChatSession.sendMessage",
+	},
+	SEND_MESSAGE_STREAM: {
+		METHOD: "vertexAI.ChatSession.sendMessageStream",
+	},
+} as const;
+export type VertexAIFunctions = typeof APIS[keyof typeof APIS]['METHOD']
+export const VertexAIFunctionNames: VertexAIFunctions[] = Object.values(APIS).map((api) => api.METHOD)

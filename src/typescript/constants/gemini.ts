@@ -15,24 +15,12 @@
  */
 
 export const APIS = {
-  GENERATE_TEXT: {
-    METHOD: 'ai.generateText',
+	GENERATE_CONTENT: {
+		METHOD: "gemini.GenerativeModel.generateContent",
   },
-  STREAM_TEXT: {
-    METHOD: 'ai.streamText',
-  },
-  EMBED: {
-    METHOD: 'ai.embed',
-  },
-  EMBED_MANY: {
-    METHOD: 'ai.embedMany',
-  },
-  GENERATE_OBJECT: {
-    METHOD: 'ai.generateObject',
-  },
-  STREAM_OBJECT: {
-    METHOD: 'ai.streamObject',
-  },
-} as const
-export type VercelAIFunctions = typeof APIS[keyof typeof APIS]['METHOD']
-export const VercelAIFunctionNames: VercelAIFunctions[] = Object.values(APIS).map((api) => api.METHOD)
+	GENERATE_CONTENT_STREAM: {
+		METHOD: "gemini.GenerativeModel.generateContentStream",
+	},
+} as const;
+export type GeminiFunctions = typeof APIS[keyof typeof APIS]['METHOD']
+export const GeminiFunctionNames: GeminiFunctions[] = Object.values(APIS).map((api) => api.METHOD)

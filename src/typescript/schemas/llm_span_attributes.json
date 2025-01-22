@@ -4,6 +4,10 @@
   "type": "object",
   "additionalProperties": false,
   "properties": {
+    "langtrace.span.name": {
+      "type": "string",
+      "description": "Name of the span"
+    },
     "langtrace.service.name": {
       "type": "string",
       "description": "Name of the service. Includes all supported service providers by langtrace"
