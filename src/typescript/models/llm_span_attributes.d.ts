@@ -147,7 +147,7 @@ export interface LLMSpanAttributes {
   /**
    * Seed from the input request
    */
-  "gen_ai.request.seed"?: string;
+  "gen_ai.request.seed"?: string | number;
   /**
    * Frequency penalty from the input request
    */
