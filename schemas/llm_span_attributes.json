@@ -163,7 +163,7 @@
       "description": "The number of search units used in the request."
     },
     "gen_ai.request.seed": {
-      "type": "string",
+      "type": ["string", "integer"],
       "description": "Seed from the input request"
     },
     "gen_ai.request.frequency_penalty": {
