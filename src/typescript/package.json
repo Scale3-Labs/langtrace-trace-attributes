@@ -1,22 +1,22 @@
 {
-    "name": "@langtrase/trace-attributes",
-    "version": "7.5.1",
-    "description": "LangTrace - Trace Attributes",
-    "main": "dist/index.js",
-    "types": "dist/index.d.ts",
-    "scripts": {
-        "build": "tsc -p tsconfig.build.json && ncp models dist/models",
-        "publish": "npm publish --access public"
-    },
-    "files": [
-        "dist/**/*"
-    ],
-    "author": "Karthik Kalyanaraman",
-    "license": "MIT",
-    "dependencies": {
-        "js-tiktoken": "^1.0.14",
-        "json-schema-to-typescript": "^14.1.0",
-        "ncp": "^2.0.0",
-        "typescript": "^5.5.3"
-    }
+  "name": "@langtrase/trace-attributes",
+  "version": "7.5.2",
+  "description": "LangTrace - Trace Attributes",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json && ncp models dist/models",
+    "publish": "npm publish --access public"
+  },
+  "files": [
+    "dist/**/*"
+  ],
+  "author": "Karthik Kalyanaraman",
+  "license": "MIT",
+  "dependencies": {
+    "js-tiktoken": "^1.0.14",
+    "json-schema-to-typescript": "^14.1.0",
+    "ncp": "^2.0.0",
+    "typescript": "^5.5.3"
+  }
 }
