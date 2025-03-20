@@ -119,6 +119,16 @@ class ChromaDBMethods(Enum):
     UPSERT = "chromadb.collection.upsert"
     MODIFY = "chromadb.collection.modify"
     COUNT = "chromadb.collection.count"
+    
+class Neo4jMethods(Enum):
+    RUN = "neo4j.session.run"
+    BEGIN_TRANSACTION = "neo4j.session.begin_transaction"
+    READ_TRANSACTION = "neo4j.session.read_transaction"
+    WRITE_TRANSACTION = "neo4j.session.write_transaction"
+    EXECUTE_READ = "neo4j.session.execute_read"
+    EXECUTE_WRITE = "neo4j.session.execute_write"
+    EXECUTE_QUERY = "neo4j.driver.execute_query"
+    TX_RUN = "neo4j.transaction.run"
 
 
 class QdrantDBMethods(Enum):
