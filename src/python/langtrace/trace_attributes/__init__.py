@@ -189,4 +189,5 @@ __all__ = [
     "WeaviateMethods",
     "MistralMethods",
     "AWSBedrockMethods",
+    "Neo4jMethods",
 ]
