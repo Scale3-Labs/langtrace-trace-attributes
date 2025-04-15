@@ -22,6 +22,10 @@ export const APIS = {
   CONVERSE_STREAM: {
     METHOD: 'awsbedrock.converseStream',
     ENDPOINT: '/converse-stream'
+  },
+  INVOKE_MODEL: {
+    METHOD: 'awsbedrock.invokeModel',
+    ENDPOINT: '/invoke-model'
   }
 } as const
 export type AWSBedrockFunctions = typeof APIS[keyof typeof APIS]['METHOD']
